@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8718F6616BD541D00178425 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = F8718F6516BD541D00178425 /* Location.m */; };
+		F8718F6816BD543A00178425 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8718F6716BD543A00178425 /* CoreLocation.framework */; };
+		F8718F6916BD545500178425 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8718F6716BD543A00178425 /* CoreLocation.framework */; };
+		F8718F6A16BD556200178425 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = F8718F6516BD541D00178425 /* Location.m */; };
+		F8718F6D16BD68A000178425 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8718F6B16BD684500178425 /* MapKit.framework */; };
+		F872A22816BDE45600AA7507 /* LocationGHAsyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F872A22716BDE45600AA7507 /* LocationGHAsyncTests.m */; };
 		F8A8C68D16BD4E24005D26D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68C16BD4E24005D26D9 /* UIKit.framework */; };
 		F8A8C68F16BD4E24005D26D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68E16BD4E24005D26D9 /* Foundation.framework */; };
 		F8A8C69116BD4E24005D26D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C69016BD4E24005D26D9 /* CoreGraphics.framework */; };
@@ -27,10 +33,37 @@
 		F8A8C6BD16BD4E24005D26D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68C16BD4E24005D26D9 /* UIKit.framework */; };
 		F8A8C6BE16BD4E24005D26D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68E16BD4E24005D26D9 /* Foundation.framework */; };
 		F8A8C6C616BD4E24005D26D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8A8C6C416BD4E24005D26D9 /* InfoPlist.strings */; };
-		F8A8C6C916BD4E24005D26D9 /* EquilibriumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A8C6C816BD4E24005D26D9 /* EquilibriumTests.m */; };
+		F8A8C6C916BD4E24005D26D9 /* ApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A8C6C816BD4E24005D26D9 /* ApplicationTests.m */; };
+		F8A8C6D816BD4EFC005D26D9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C6BB16BD4E24005D26D9 /* SenTestingKit.framework */; };
+		F8A8C6D916BD4EFC005D26D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68C16BD4E24005D26D9 /* UIKit.framework */; };
+		F8A8C6DA16BD4EFC005D26D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68E16BD4E24005D26D9 /* Foundation.framework */; };
+		F8A8C6E016BD4EFC005D26D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8A8C6DE16BD4EFC005D26D9 /* InfoPlist.strings */; };
+		F8A8C6E316BD4EFC005D26D9 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A8C6E216BD4EFC005D26D9 /* LocationTests.m */; };
+		F8B1F16516BEF9320018B347 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B1F16416BEF9320018B347 /* libOCMock.a */; };
+		F8B1F16716BF065C0018B347 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B1F16416BEF9320018B347 /* libOCMock.a */; };
+		F8B793C216BE755D00652DAC /* WeatherAPITest.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B793C116BE755D00652DAC /* WeatherAPITest.m */; };
+		F8CF497F16BDAC28001CD5D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68C16BD4E24005D26D9 /* UIKit.framework */; };
+		F8CF498016BDAC28001CD5D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68E16BD4E24005D26D9 /* Foundation.framework */; };
+		F8CF498116BDAC28001CD5D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C69016BD4E24005D26D9 /* CoreGraphics.framework */; };
+		F8CF498716BDAC28001CD5D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8CF498516BDAC28001CD5D2 /* InfoPlist.strings */; };
+		F8CF498916BDAC28001CD5D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CF498816BDAC28001CD5D2 /* main.m */; };
+		F8CF499716BDAE39001CD5D2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8718F6716BD543A00178425 /* CoreLocation.framework */; };
+		F8CF499A16BDAE5B001CD5D2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8CF499916BDAE5B001CD5D2 /* Default-568h@2x.png */; };
+		F8CF499B16BDB723001CD5D2 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = F8718F6516BD541D00178425 /* Location.m */; };
+		F8CF499C16BDB735001CD5D2 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A8C6E216BD4EFC005D26D9 /* LocationTests.m */; };
+		F8CF499D16BDB77D001CD5D2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C6BB16BD4E24005D26D9 /* SenTestingKit.framework */; };
+		F8CF499F16BDC120001CD5D2 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CF499E16BDC120001CD5D2 /* GHUnitIOS.framework */; };
+		F8FF938D16BDC2E8003AB3ED /* LocationGHTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FF938C16BDC2E8003AB3ED /* LocationGHTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F8718F6E16BD735100178425 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8A8C68116BD4E24005D26D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8A8C6D616BD4EFC005D26D9;
+			remoteInfo = LogicTests;
+		};
 		F8A8C6BF16BD4E24005D26D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8A8C68116BD4E24005D26D9 /* Project object */;
@@ -41,6 +74,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F8718F6416BD541D00178425 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		F8718F6516BD541D00178425 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		F8718F6716BD543A00178425 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F8718F6B16BD684500178425 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F872A22316BDDD2B00AA7507 /* LocationForTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationForTesting.h; sourceTree = "<group>"; };
+		F872A22716BDE45600AA7507 /* LocationGHAsyncTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationGHAsyncTests.m; sourceTree = "<group>"; };
 		F8A8C68916BD4E24005D26D9 /* Equilibrium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Equilibrium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A8C68C16BD4E24005D26D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F8A8C68E16BD4E24005D26D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,8 +106,24 @@
 		F8A8C6BB16BD4E24005D26D9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		F8A8C6C316BD4E24005D26D9 /* EquilibriumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EquilibriumTests-Info.plist"; sourceTree = "<group>"; };
 		F8A8C6C516BD4E24005D26D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F8A8C6C716BD4E24005D26D9 /* EquilibriumTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EquilibriumTests.h; sourceTree = "<group>"; };
-		F8A8C6C816BD4E24005D26D9 /* EquilibriumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EquilibriumTests.m; sourceTree = "<group>"; };
+		F8A8C6C716BD4E24005D26D9 /* ApplicationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationTests.h; sourceTree = "<group>"; };
+		F8A8C6C816BD4E24005D26D9 /* ApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationTests.m; sourceTree = "<group>"; };
+		F8A8C6D716BD4EFC005D26D9 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8A8C6DD16BD4EFC005D26D9 /* LogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LogicTests-Info.plist"; sourceTree = "<group>"; };
+		F8A8C6DF16BD4EFC005D26D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F8A8C6E116BD4EFC005D26D9 /* LocationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationTests.h; sourceTree = "<group>"; };
+		F8A8C6E216BD4EFC005D26D9 /* LocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTests.m; sourceTree = "<group>"; };
+		F8A8C6E416BD4EFC005D26D9 /* LogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogicTests-Prefix.pch"; sourceTree = "<group>"; };
+		F8B1F16416BEF9320018B347 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "Equilibrium/OCMock 2.0.1/libOCMock.a"; sourceTree = "<group>"; };
+		F8B793C116BE755D00652DAC /* WeatherAPITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherAPITest.m; sourceTree = "<group>"; };
+		F8CF497E16BDAC28001CD5D2 /* GHUnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHUnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8CF498416BDAC28001CD5D2 /* GHUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GHUnitTests-Info.plist"; sourceTree = "<group>"; };
+		F8CF498616BDAC28001CD5D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F8CF498816BDAC28001CD5D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F8CF498A16BDAC28001CD5D2 /* GHUnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GHUnitTests-Prefix.pch"; sourceTree = "<group>"; };
+		F8CF499916BDAE5B001CD5D2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		F8CF499E16BDC120001CD5D2 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = Equilibrium/GHUnitIOS.framework; sourceTree = "<group>"; };
+		F8FF938C16BDC2E8003AB3ED /* LocationGHTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationGHTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +131,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8718F6D16BD68A000178425 /* MapKit.framework in Frameworks */,
 				F8A8C68D16BD4E24005D26D9 /* UIKit.framework in Frameworks */,
 				F8A8C68F16BD4E24005D26D9 /* Foundation.framework in Frameworks */,
 				F8A8C69116BD4E24005D26D9 /* CoreGraphics.framework in Frameworks */,
+				F8718F6916BD545500178425 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,14 +149,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8A8C6D316BD4EFC005D26D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B1F16516BEF9320018B347 /* libOCMock.a in Frameworks */,
+				F8718F6816BD543A00178425 /* CoreLocation.framework in Frameworks */,
+				F8A8C6D816BD4EFC005D26D9 /* SenTestingKit.framework in Frameworks */,
+				F8A8C6D916BD4EFC005D26D9 /* UIKit.framework in Frameworks */,
+				F8A8C6DA16BD4EFC005D26D9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8CF497B16BDAC28001CD5D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8CF497F16BDAC28001CD5D2 /* UIKit.framework in Frameworks */,
+				F8CF498016BDAC28001CD5D2 /* Foundation.framework in Frameworks */,
+				F8CF498116BDAC28001CD5D2 /* CoreGraphics.framework in Frameworks */,
+				F8CF499716BDAE39001CD5D2 /* CoreLocation.framework in Frameworks */,
+				F8CF499D16BDB77D001CD5D2 /* SenTestingKit.framework in Frameworks */,
+				F8CF499F16BDC120001CD5D2 /* GHUnitIOS.framework in Frameworks */,
+				F8B1F16716BF065C0018B347 /* libOCMock.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F8718F6316BD53B200178425 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F8718F6416BD541D00178425 /* Location.h */,
+				F872A22316BDDD2B00AA7507 /* LocationForTesting.h */,
+				F8718F6516BD541D00178425 /* Location.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		F8A8C68016BD4E24005D26D9 = {
 			isa = PBXGroup;
 			children = (
 				F8A8C69216BD4E24005D26D9 /* Equilibrium */,
-				F8A8C6C116BD4E24005D26D9 /* EquilibriumTests */,
+				F8A8C6C116BD4E24005D26D9 /* ApplicationTests */,
+				F8A8C6DB16BD4EFC005D26D9 /* LogicTests */,
+				F8CF498216BDAC28001CD5D2 /* GHUnitTests */,
 				F8A8C68B16BD4E24005D26D9 /* Frameworks */,
 				F8A8C68A16BD4E24005D26D9 /* Products */,
 			);
@@ -110,6 +205,8 @@
 			children = (
 				F8A8C68916BD4E24005D26D9 /* Equilibrium.app */,
 				F8A8C6BA16BD4E24005D26D9 /* EquilibriumTests.octest */,
+				F8A8C6D716BD4EFC005D26D9 /* LogicTests.octest */,
+				F8CF497E16BDAC28001CD5D2 /* GHUnitTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +214,10 @@
 		F8A8C68B16BD4E24005D26D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F8B1F16416BEF9320018B347 /* libOCMock.a */,
+				F8CF499E16BDC120001CD5D2 /* GHUnitIOS.framework */,
+				F8718F6B16BD684500178425 /* MapKit.framework */,
+				F8718F6716BD543A00178425 /* CoreLocation.framework */,
 				F8A8C68C16BD4E24005D26D9 /* UIKit.framework */,
 				F8A8C68E16BD4E24005D26D9 /* Foundation.framework */,
 				F8A8C69016BD4E24005D26D9 /* CoreGraphics.framework */,
@@ -131,6 +232,7 @@
 				F8A8C69B16BD4E24005D26D9 /* AppDelegate.h */,
 				F8A8C69C16BD4E24005D26D9 /* AppDelegate.m */,
 				F8A8C6A416BD4E24005D26D9 /* MainStoryboard.storyboard */,
+				F8718F6316BD53B200178425 /* Models */,
 				F8A8C6A716BD4E24005D26D9 /* FirstViewController.h */,
 				F8A8C6A816BD4E24005D26D9 /* FirstViewController.m */,
 				F8A8C6AA16BD4E24005D26D9 /* first.png */,
@@ -154,17 +256,19 @@
 				F8A8C69E16BD4E24005D26D9 /* Default.png */,
 				F8A8C6A016BD4E24005D26D9 /* Default@2x.png */,
 				F8A8C6A216BD4E24005D26D9 /* Default-568h@2x.png */,
+				F8CF499916BDAE5B001CD5D2 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F8A8C6C116BD4E24005D26D9 /* EquilibriumTests */ = {
+		F8A8C6C116BD4E24005D26D9 /* ApplicationTests */ = {
 			isa = PBXGroup;
 			children = (
-				F8A8C6C716BD4E24005D26D9 /* EquilibriumTests.h */,
-				F8A8C6C816BD4E24005D26D9 /* EquilibriumTests.m */,
+				F8A8C6C716BD4E24005D26D9 /* ApplicationTests.h */,
+				F8A8C6C816BD4E24005D26D9 /* ApplicationTests.m */,
 				F8A8C6C216BD4E24005D26D9 /* Supporting Files */,
 			);
+			name = ApplicationTests;
 			path = EquilibriumTests;
 			sourceTree = "<group>";
 		};
@@ -177,6 +281,48 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F8A8C6DB16BD4EFC005D26D9 /* LogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8C6E116BD4EFC005D26D9 /* LocationTests.h */,
+				F8A8C6E216BD4EFC005D26D9 /* LocationTests.m */,
+				F8A8C6DC16BD4EFC005D26D9 /* Supporting Files */,
+			);
+			path = LogicTests;
+			sourceTree = "<group>";
+		};
+		F8A8C6DC16BD4EFC005D26D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8C6DD16BD4EFC005D26D9 /* LogicTests-Info.plist */,
+				F8A8C6DE16BD4EFC005D26D9 /* InfoPlist.strings */,
+				F8A8C6E416BD4EFC005D26D9 /* LogicTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8CF498216BDAC28001CD5D2 /* GHUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8B793C116BE755D00652DAC /* WeatherAPITest.m */,
+				F872A22716BDE45600AA7507 /* LocationGHAsyncTests.m */,
+				F8FF938C16BDC2E8003AB3ED /* LocationGHTests.m */,
+				F8CF498316BDAC28001CD5D2 /* Supporting Files */,
+			);
+			path = GHUnitTests;
+			sourceTree = "<group>";
+		};
+		F8CF498316BDAC28001CD5D2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8CF498416BDAC28001CD5D2 /* GHUnitTests-Info.plist */,
+				F8CF498516BDAC28001CD5D2 /* InfoPlist.strings */,
+				F8CF498816BDAC28001CD5D2 /* main.m */,
+				F8CF498A16BDAC28001CD5D2 /* GHUnitTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,13 +330,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8A8C6CC16BD4E24005D26D9 /* Build configuration list for PBXNativeTarget "Equilibrium" */;
 			buildPhases = (
-				F8A8C68516BD4E24005D26D9 /* Sources */,
 				F8A8C68616BD4E24005D26D9 /* Frameworks */,
+				F8A8C68516BD4E24005D26D9 /* Sources */,
 				F8A8C68716BD4E24005D26D9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F8718F6F16BD735100178425 /* PBXTargetDependency */,
 			);
 			name = Equilibrium;
 			productName = Equilibrium;
@@ -216,6 +363,41 @@
 			productReference = F8A8C6BA16BD4E24005D26D9 /* EquilibriumTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		F8A8C6D616BD4EFC005D26D9 /* LogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8A8C6E516BD4EFC005D26D9 /* Build configuration list for PBXNativeTarget "LogicTests" */;
+			buildPhases = (
+				F8A8C6D216BD4EFC005D26D9 /* Sources */,
+				F8A8C6D316BD4EFC005D26D9 /* Frameworks */,
+				F8A8C6D416BD4EFC005D26D9 /* Resources */,
+				F8A8C6D516BD4EFC005D26D9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LogicTests;
+			productName = LogicTests;
+			productReference = F8A8C6D716BD4EFC005D26D9 /* LogicTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		F8CF497D16BDAC28001CD5D2 /* GHUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8CF499016BDAC28001CD5D2 /* Build configuration list for PBXNativeTarget "GHUnitTests" */;
+			buildPhases = (
+				F8CF497A16BDAC28001CD5D2 /* Sources */,
+				F8CF497B16BDAC28001CD5D2 /* Frameworks */,
+				F8CF497C16BDAC28001CD5D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GHUnitTests;
+			productName = GHUnitTests;
+			productReference = F8CF497E16BDAC28001CD5D2 /* GHUnitTests.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -239,6 +421,8 @@
 			targets = (
 				F8A8C68816BD4E24005D26D9 /* Equilibrium */,
 				F8A8C6B916BD4E24005D26D9 /* EquilibriumTests */,
+				F8A8C6D616BD4EFC005D26D9 /* LogicTests */,
+				F8CF497D16BDAC28001CD5D2 /* GHUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,10 +452,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8A8C6D416BD4EFC005D26D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8A8C6E016BD4EFC005D26D9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8CF497C16BDAC28001CD5D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8CF498716BDAC28001CD5D2 /* InfoPlist.strings in Resources */,
+				F8CF499A16BDAE5B001CD5D2 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		F8A8C6B816BD4E24005D26D9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		F8A8C6D516BD4EFC005D26D9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,6 +509,7 @@
 				F8A8C69D16BD4E24005D26D9 /* AppDelegate.m in Sources */,
 				F8A8C6A916BD4E24005D26D9 /* FirstViewController.m in Sources */,
 				F8A8C6B016BD4E24005D26D9 /* SecondViewController.m in Sources */,
+				F8718F6616BD541D00178425 /* Location.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,13 +517,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A8C6C916BD4E24005D26D9 /* EquilibriumTests.m in Sources */,
+				F8A8C6C916BD4E24005D26D9 /* ApplicationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8A8C6D216BD4EFC005D26D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8A8C6E316BD4EFC005D26D9 /* LocationTests.m in Sources */,
+				F8718F6A16BD556200178425 /* Location.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8CF497A16BDAC28001CD5D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8CF498916BDAC28001CD5D2 /* main.m in Sources */,
+				F8CF499B16BDB723001CD5D2 /* Location.m in Sources */,
+				F8CF499C16BDB735001CD5D2 /* LocationTests.m in Sources */,
+				F8FF938D16BDC2E8003AB3ED /* LocationGHTests.m in Sources */,
+				F872A22816BDE45600AA7507 /* LocationGHAsyncTests.m in Sources */,
+				F8B793C216BE755D00652DAC /* WeatherAPITest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F8718F6F16BD735100178425 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8A8C6D616BD4EFC005D26D9 /* LogicTests */;
+			targetProxy = F8718F6E16BD735100178425 /* PBXContainerItemProxy */;
+		};
 		F8A8C6C016BD4E24005D26D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F8A8C68816BD4E24005D26D9 /* Equilibrium */;
@@ -337,6 +579,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				F8A8C6C516BD4E24005D26D9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F8A8C6DE16BD4EFC005D26D9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8A8C6DF16BD4EFC005D26D9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F8CF498516BDAC28001CD5D2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8CF498616BDAC28001CD5D2 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -456,6 +714,118 @@
 			};
 			name = Release;
 		};
+		F8A8C6E616BD4EFC005D26D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LogicTests/LogicTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
+				);
+				INFOPLIST_FILE = "LogicTests/LogicTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F8A8C6E716BD4EFC005D26D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LogicTests/LogicTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
+				);
+				INFOPLIST_FILE = "LogicTests/LogicTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		F8CF498E16BDAC28001CD5D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(SRCROOT)/Equilibrium\"",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GHUnitTests/GHUnitTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
+				);
+				INFOPLIST_FILE = "GHUnitTests/GHUnitTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F8CF498F16BDAC28001CD5D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(SRCROOT)/Equilibrium\"",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GHUnitTests/GHUnitTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
+				);
+				INFOPLIST_FILE = "GHUnitTests/GHUnitTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -475,6 +845,7 @@
 				F8A8C6CE16BD4E24005D26D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8A8C6CF16BD4E24005D26D9 /* Build configuration list for PBXNativeTarget "EquilibriumTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +854,25 @@
 				F8A8C6D116BD4E24005D26D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8A8C6E516BD4EFC005D26D9 /* Build configuration list for PBXNativeTarget "LogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8A8C6E616BD4EFC005D26D9 /* Debug */,
+				F8A8C6E716BD4EFC005D26D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8CF499016BDAC28001CD5D2 /* Build configuration list for PBXNativeTarget "GHUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8CF498E16BDAC28001CD5D2 /* Debug */,
+				F8CF498F16BDAC28001CD5D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Location.h"
+#import <MapKit/MapKit.h>
+
 
 @interface FirstViewController : UIViewController
+
+@property (nonatomic, strong) Location * location;
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
