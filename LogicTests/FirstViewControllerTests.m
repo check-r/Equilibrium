@@ -72,7 +72,7 @@
 
 -(void) testViewDidLoadSetsUserTrackingMode {
     
-    id mock = [OCMockObject mockForClass:[MKMapView class]];
+    id mock = [OCMockObject niceMockForClass:[MKMapView class]];
     [[mock expect] setUserTrackingMode:MKUserTrackingModeFollow];
     [self.fvc setMapView:(MKMapView *)mock];
     [self.fvc viewDidLoad];
@@ -115,5 +115,23 @@
     [mockFVC verify];
 }
 
+-(void) testTapGestureHandlerSetsUserTrackingModeFollow {
+    
+    id mock = [OCMockObject mockForClass:[MKMapView class]];
+    [[mock expect] setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
+    [self.fvc setMapView:(MKMapView *)mock];
+    [self.fvc handleMapTap];
+    [mock verify];
+}
+
+
+-(void) testViewDidLoadSetsMapGestureRecognizer {
+    
+    id mock = [OCMockObject niceMockForClass:[MKMapView class]];
+    [[mock expect] addGestureRecognizer:[OCMArg any]];
+    [self.fvc setMapView:(MKMapView *)mock];
+    [self.fvc viewDidLoad];
+    [mock verify];
+}
 
 @end

@@ -32,8 +32,10 @@
     [self beginnLocationUpdates:self.myLocation];
     self.mapView.userTrackingMode = MKUserTrackingModeFollow;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleLocationChange:) name:@"LocationChange" object:nil];
+    UITapGestureRecognizer * mapTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleMapTap)];
+    [self.mapView addGestureRecognizer:mapTap];
     
-//    self.mapView.showsUserLocation = YES;  // set in nib also possible
+    self.mapView.showsUserLocation = YES;  // set in nib also possible, or must be used with niceMocks when set in viewDidLoad
 }
 
 
@@ -52,11 +54,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Notification Handler
+
+
 -(void)handleLocationChange:(NSNotification *)notification {
     
     Location * location = [notification object];
     NSString * speed = [location mySpeedText];
     [self.speedLabel setText:speed];
+    
+}
+
+#pragma mark - Tap Handler
+
+-(void)handleMapTap {
+    
+    [self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     
 }
 

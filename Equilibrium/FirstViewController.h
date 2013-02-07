@@ -20,5 +20,6 @@
 
 -(void)beginnLocationUpdates:(Location *)myLocation;
 -(void)handleLocationChange:(NSNotification *)notification;
+-(void)handleMapTap;
 
 @end
