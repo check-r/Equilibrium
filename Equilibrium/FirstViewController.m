@@ -14,7 +14,7 @@
 
 @implementation FirstViewController
 
-@synthesize location, mapView;
+@synthesize myLocation, mapView;
 
 
 #pragma mark - View Lifecycle
@@ -23,7 +23,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.location = [[Location alloc]init];
+    self.myLocation = [[Location alloc]init];
+    self.mapView.showsUserLocation = YES;
+    self.mapView.userTrackingMode = MKUserTrackingModeFollow;
     
 }
 

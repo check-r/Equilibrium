@@ -13,8 +13,9 @@
 
 @interface FirstViewController : UIViewController
 
-@property (nonatomic, strong) Location * location;
+@property (nonatomic, strong) Location * myLocation;
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UILabel *speedLabel;
 
 @end

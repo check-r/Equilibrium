@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F80E06DA16C2B6F5006431E5 /* FirstViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F80E06D916C2B6F5006431E5 /* FirstViewControllerTests.m */; };
 		F8718F6616BD541D00178425 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = F8718F6516BD541D00178425 /* Location.m */; };
 		F8718F6816BD543A00178425 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8718F6716BD543A00178425 /* CoreLocation.framework */; };
 		F8718F6916BD545500178425 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8718F6716BD543A00178425 /* CoreLocation.framework */; };
 		F8718F6A16BD556200178425 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = F8718F6516BD541D00178425 /* Location.m */; };
 		F8718F6D16BD68A000178425 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8718F6B16BD684500178425 /* MapKit.framework */; };
 		F872A22816BDE45600AA7507 /* LocationGHAsyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F872A22716BDE45600AA7507 /* LocationGHAsyncTests.m */; };
+		F87D763C16C2594C002CF484 /* BNPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F87D763B16C2594C002CF484 /* BNPieChart.m */; };
+		F87D763F16C25B83002CF484 /* BNColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F87D763E16C25B83002CF484 /* BNColor.m */; };
+		F87D764216C25BB1002CF484 /* NSObject+Be.m in Sources */ = {isa = PBXBuildFile; fileRef = F87D764116C25BB1002CF484 /* NSObject+Be.m */; };
+		F87D764616C2AE80002CF484 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A8C6A816BD4E24005D26D9 /* FirstViewController.m */; };
 		F8A8C68D16BD4E24005D26D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68C16BD4E24005D26D9 /* UIKit.framework */; };
 		F8A8C68F16BD4E24005D26D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68E16BD4E24005D26D9 /* Foundation.framework */; };
 		F8A8C69116BD4E24005D26D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C69016BD4E24005D26D9 /* CoreGraphics.framework */; };
@@ -37,7 +42,6 @@
 		F8A8C6D816BD4EFC005D26D9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C6BB16BD4E24005D26D9 /* SenTestingKit.framework */; };
 		F8A8C6D916BD4EFC005D26D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68C16BD4E24005D26D9 /* UIKit.framework */; };
 		F8A8C6DA16BD4EFC005D26D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68E16BD4E24005D26D9 /* Foundation.framework */; };
-		F8A8C6E016BD4EFC005D26D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8A8C6DE16BD4EFC005D26D9 /* InfoPlist.strings */; };
 		F8A8C6E316BD4EFC005D26D9 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A8C6E216BD4EFC005D26D9 /* LocationTests.m */; };
 		F8B1F16516BEF9320018B347 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B1F16416BEF9320018B347 /* libOCMock.a */; };
 		F8B1F16716BF065C0018B347 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B1F16416BEF9320018B347 /* libOCMock.a */; };
@@ -74,12 +78,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F80E06D916C2B6F5006431E5 /* FirstViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewControllerTests.m; sourceTree = "<group>"; };
 		F8718F6416BD541D00178425 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		F8718F6516BD541D00178425 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		F8718F6716BD543A00178425 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F8718F6B16BD684500178425 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F872A22316BDDD2B00AA7507 /* LocationForTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationForTesting.h; sourceTree = "<group>"; };
 		F872A22716BDE45600AA7507 /* LocationGHAsyncTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationGHAsyncTests.m; sourceTree = "<group>"; };
+		F87D763A16C2594C002CF484 /* BNPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNPieChart.h; sourceTree = "<group>"; };
+		F87D763B16C2594C002CF484 /* BNPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNPieChart.m; sourceTree = "<group>"; };
+		F87D763D16C25B83002CF484 /* BNColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNColor.h; sourceTree = "<group>"; };
+		F87D763E16C25B83002CF484 /* BNColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNColor.m; sourceTree = "<group>"; };
+		F87D764016C25BB1002CF484 /* NSObject+Be.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Be.h"; sourceTree = "<group>"; };
+		F87D764116C25BB1002CF484 /* NSObject+Be.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Be.m"; sourceTree = "<group>"; };
+		F87D764B16C2B236002CF484 /* LogicTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LogicTests-Info.plist"; sourceTree = "<group>"; };
+		F87D764C16C2B236002CF484 /* LogicTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LogicTests-Prefix.pch"; sourceTree = "<group>"; };
 		F8A8C68916BD4E24005D26D9 /* Equilibrium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Equilibrium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A8C68C16BD4E24005D26D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F8A8C68E16BD4E24005D26D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,11 +122,7 @@
 		F8A8C6C716BD4E24005D26D9 /* ApplicationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationTests.h; sourceTree = "<group>"; };
 		F8A8C6C816BD4E24005D26D9 /* ApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationTests.m; sourceTree = "<group>"; };
 		F8A8C6D716BD4EFC005D26D9 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8A8C6DD16BD4EFC005D26D9 /* LogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LogicTests-Info.plist"; sourceTree = "<group>"; };
-		F8A8C6DF16BD4EFC005D26D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F8A8C6E116BD4EFC005D26D9 /* LocationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationTests.h; sourceTree = "<group>"; };
 		F8A8C6E216BD4EFC005D26D9 /* LocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTests.m; sourceTree = "<group>"; };
-		F8A8C6E416BD4EFC005D26D9 /* LogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogicTests-Prefix.pch"; sourceTree = "<group>"; };
 		F8B1F16416BEF9320018B347 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "Equilibrium/OCMock 2.0.1/libOCMock.a"; sourceTree = "<group>"; };
 		F8B793C116BE755D00652DAC /* WeatherAPITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherAPITest.m; sourceTree = "<group>"; };
 		F8CF497E16BDAC28001CD5D2 /* GHUnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHUnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +197,28 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		F87D763916C258EC002CF484 /* BNPieChart */ = {
+			isa = PBXGroup;
+			children = (
+				F87D763D16C25B83002CF484 /* BNColor.h */,
+				F87D763E16C25B83002CF484 /* BNColor.m */,
+				F87D763A16C2594C002CF484 /* BNPieChart.h */,
+				F87D763B16C2594C002CF484 /* BNPieChart.m */,
+				F87D764016C25BB1002CF484 /* NSObject+Be.h */,
+				F87D764116C25BB1002CF484 /* NSObject+Be.m */,
+			);
+			name = BNPieChart;
+			sourceTree = "<group>";
+		};
+		F87D764A16C2B217002CF484 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F87D764B16C2B236002CF484 /* LogicTests-Info.plist */,
+				F87D764C16C2B236002CF484 /* LogicTests-Prefix.pch */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		F8A8C68016BD4E24005D26D9 = {
 			isa = PBXGroup;
 			children = (
@@ -232,15 +263,12 @@
 				F8A8C69B16BD4E24005D26D9 /* AppDelegate.h */,
 				F8A8C69C16BD4E24005D26D9 /* AppDelegate.m */,
 				F8A8C6A416BD4E24005D26D9 /* MainStoryboard.storyboard */,
+				F87D763916C258EC002CF484 /* BNPieChart */,
 				F8718F6316BD53B200178425 /* Models */,
 				F8A8C6A716BD4E24005D26D9 /* FirstViewController.h */,
 				F8A8C6A816BD4E24005D26D9 /* FirstViewController.m */,
-				F8A8C6AA16BD4E24005D26D9 /* first.png */,
-				F8A8C6AC16BD4E24005D26D9 /* first@2x.png */,
 				F8A8C6AE16BD4E24005D26D9 /* SecondViewController.h */,
 				F8A8C6AF16BD4E24005D26D9 /* SecondViewController.m */,
-				F8A8C6B116BD4E24005D26D9 /* second.png */,
-				F8A8C6B316BD4E24005D26D9 /* second@2x.png */,
 				F8A8C69316BD4E24005D26D9 /* Supporting Files */,
 			);
 			path = Equilibrium;
@@ -257,6 +285,10 @@
 				F8A8C6A016BD4E24005D26D9 /* Default@2x.png */,
 				F8A8C6A216BD4E24005D26D9 /* Default-568h@2x.png */,
 				F8CF499916BDAE5B001CD5D2 /* Default-568h@2x.png */,
+				F8A8C6B116BD4E24005D26D9 /* second.png */,
+				F8A8C6B316BD4E24005D26D9 /* second@2x.png */,
+				F8A8C6AA16BD4E24005D26D9 /* first.png */,
+				F8A8C6AC16BD4E24005D26D9 /* first@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -284,21 +316,11 @@
 		F8A8C6DB16BD4EFC005D26D9 /* LogicTests */ = {
 			isa = PBXGroup;
 			children = (
-				F8A8C6E116BD4EFC005D26D9 /* LocationTests.h */,
+				F80E06D916C2B6F5006431E5 /* FirstViewControllerTests.m */,
 				F8A8C6E216BD4EFC005D26D9 /* LocationTests.m */,
-				F8A8C6DC16BD4EFC005D26D9 /* Supporting Files */,
+				F87D764A16C2B217002CF484 /* SupportingFiles */,
 			);
 			path = LogicTests;
-			sourceTree = "<group>";
-		};
-		F8A8C6DC16BD4EFC005D26D9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F8A8C6DD16BD4EFC005D26D9 /* LogicTests-Info.plist */,
-				F8A8C6DE16BD4EFC005D26D9 /* InfoPlist.strings */,
-				F8A8C6E416BD4EFC005D26D9 /* LogicTests-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F8CF498216BDAC28001CD5D2 /* GHUnitTests */ = {
@@ -456,7 +478,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A8C6E016BD4EFC005D26D9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +531,9 @@
 				F8A8C6A916BD4E24005D26D9 /* FirstViewController.m in Sources */,
 				F8A8C6B016BD4E24005D26D9 /* SecondViewController.m in Sources */,
 				F8718F6616BD541D00178425 /* Location.m in Sources */,
+				F87D763C16C2594C002CF484 /* BNPieChart.m in Sources */,
+				F87D763F16C25B83002CF484 /* BNColor.m in Sources */,
+				F87D764216C25BB1002CF484 /* NSObject+Be.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +551,8 @@
 			files = (
 				F8A8C6E316BD4EFC005D26D9 /* LocationTests.m in Sources */,
 				F8718F6A16BD556200178425 /* Location.m in Sources */,
+				F87D764616C2AE80002CF484 /* FirstViewController.m in Sources */,
+				F80E06DA16C2B6F5006431E5 /* FirstViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,14 +605,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				F8A8C6C516BD4E24005D26D9 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F8A8C6DE16BD4EFC005D26D9 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F8A8C6DF16BD4EFC005D26D9 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

@@ -66,6 +66,7 @@
 -(void)locationManager:(CLLocationManager *)manager
     didUpdateLocations:(NSArray *)locations {
     
+    // new for iOS 6.1
     int lastLocation = [locations count] -1;
     CLLocation * newLocation = locations[lastLocation];
     

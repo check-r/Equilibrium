@@ -22,7 +22,8 @@
     UIApplication * application = [UIApplication sharedApplication];
     AppDelegate * appDelegate = [application delegate];
     UIWindow * window = [appDelegate window];
-    self.vc = (FirstViewController *)[window rootViewController];
+    UITabBarController * tabBar = (UITabBarController *)[window rootViewController];
+    self.vc = (FirstViewController *)[tabBar.viewControllers objectAtIndex:0];
 }
 
 - (void)tearDown
@@ -37,13 +38,27 @@
     STAssertNotNil(self.vc, @"ViewController is not set");
 }
 
-//
-//- (void)testThatMapViewIsntNil
-//{
-//    // funzt so irgendwie nicht 
-//    STAssertNotNil([self.vc mapView], @"View is not set");
-//    
-//}
+
+- (void)testThatMapViewIsntNil
+{
+    //self.map = self.vc.mapView;
+    STAssertNotNil(self.vc.mapView, @"MapView is not set");
+}
+
+-(void) testThatShowsUserLocation {
+    
+    STAssertTrue(self.vc.mapView.showsUserLocation == YES, @"ShowsUserLocation not set");
+}
+
+-(void) testThatUserTrackingFollow {
+    
+    STAssertTrue(self.vc.mapView.userTrackingMode == MKUserTrackingModeFollow, @"UserTrackingMode is not follow");
+}
+
+-(void) testThatSpeedLabelOutletIsConnected {
+    
+    STAssertNotNil(self.vc.speedLabel, @"speedLabel IBOutlet is not connected");
+}
 
 
 @end
