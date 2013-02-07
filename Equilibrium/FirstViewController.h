@@ -15,7 +15,9 @@
 
 @property (nonatomic, strong) Location * myLocation;
 
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (weak, nonatomic) IBOutlet UILabel *speedLabel;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) IBOutlet UILabel *speedLabel;
+
+- (void)beginnLocationUpdates:(Location *)myLocation;
 
 @end

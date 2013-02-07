@@ -19,14 +19,20 @@
 
 #pragma mark - View Lifecycle
 
+- (void)beginnLocationUpdates:(Location *)location
+{
+    [location startLocationUpdates];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.myLocation = [[Location alloc]init];
-    self.mapView.showsUserLocation = YES;
+    [self beginnLocationUpdates:self.myLocation];
     self.mapView.userTrackingMode = MKUserTrackingModeFollow;
-    
+
+//    self.mapView.showsUserLocation = YES;  // set in nib also possible
 }
 
 
