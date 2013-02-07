@@ -195,4 +195,51 @@
 }
 
 
+- (void)testLocationManagerDidUpdateNotification {
+    
+    id mockObserver = [OCMockObject observerMock];
+    [[NSNotificationCenter defaultCenter] addMockObserver:mockObserver name:@"LocationChange" object:nil];
+    [[mockObserver expect] notificationWithName:@"LocationChange" object:[OCMArg any]];
+    
+    id mock =  (id)[OCMockObject mockForClass:[CLLocation class]];
+    NSArray * mocks = [[NSArray alloc] initWithObjects:mock, mock, nil];
+    
+    // create stub for the speed property of the mock object
+    double metersPerMile = 1609.344;
+    double secondsPerHour = 60 * 60;
+    double metersPerSecond = 55.0 * metersPerMile / secondsPerHour;
+    // cast id type to CLLocation
+    [(CLLocation *)[[mock stub] andReturnValue:OCMOCK_VALUE(metersPerSecond)]speed];
+    
+    [self.myLocation setGeocodePending:YES];
+    [self.myLocation locationManager:nil didUpdateLocations:mocks];
+    
+    [mockObserver verify];
+    [[NSNotificationCenter defaultCenter] removeObserver:mockObserver];
+    
+}
+
+- (void)testSpeedText {
+    
+    id mock =  (id)[OCMockObject mockForClass:[CLLocation class]];
+    NSArray * mocks = [[NSArray alloc] initWithObjects:mock, mock, nil];
+    
+    // create stub for the speed property of the mock object
+    double metersPerMile = 1609.344;
+    double secondsPerHour = 60 * 60;
+    double metersPerSecond = 55.0 * metersPerMile / secondsPerHour;
+    // cast id type to CLLocation
+    [(CLLocation *)[[mock stub] andReturnValue:OCMOCK_VALUE(metersPerSecond)]speed];
+    
+    [self.myLocation setGeocodePending:YES];
+    [self.myLocation locationManager:nil didUpdateLocations:mocks];
+    
+    NSString * speedText = [self.myLocation mySpeedText];
+    STAssertTrue([speedText isEqualToString:@"55 MPH"], @"Speed is expected to be 55 but was %@",speedText);
+    
+    
+
+}
+
+
 @end

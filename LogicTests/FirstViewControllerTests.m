@@ -79,5 +79,41 @@
     [mock verify];
 }
 
+-(void) testLocationChangeNotificationUpdatesSpeed {
+    
+    id locationMock = [OCMockObject mockForClass:[Location class]];
+    [(Location *)[[locationMock stub] andReturn:@"55 MPH"] mySpeedText];
+    id notificationMock = [OCMockObject mockForClass:[NSNotification class]];
+    [[[notificationMock stub] andReturn:(Location *)locationMock] object];
+    
+    id labelMock = [OCMockObject mockForClass:[UILabel class]];
+    [[labelMock expect] setText:@"55 MPH"];
+    
+    [self.fvc setSpeedLabel:labelMock];
+    
+    [self.fvc handleLocationChange:(NSNotification *)notificationMock];
+    
+    [labelMock verify];
+}
+
+-(void) testThatNotificationHandlerCalled {
+    
+    id mockFVC = [OCMockObject partialMockForObject:self.fvc];
+    [[mockFVC expect] handleLocationChange:[OCMArg any]];
+    [mockFVC viewDidLoad];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LocationChange" object:nil];
+    [mockFVC verify];
+}
+
+-(void) testThatNotificationHandlerNotCalledAfterUnload {
+    
+    id mockFVC = [OCMockObject partialMockForObject:self.fvc];
+    [[mockFVC reject] handleLocationChange:[OCMArg any]];
+    [mockFVC viewDidLoad];
+    [mockFVC viewDidUnload];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LocationChange" object:nil];
+    [mockFVC verify];
+}
+
 
 @end

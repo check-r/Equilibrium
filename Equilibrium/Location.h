@@ -20,6 +20,7 @@
 @property (nonatomic, strong) CLLocationManager * myLocationManager;
 @property (nonatomic, strong) NSString * postalCode;
 @property (nonatomic, strong) CLGeocoder * geocoder;
+@property (nonatomic, strong) NSString * mySpeedText;
 
 -(void) startLocationUpdates;
 

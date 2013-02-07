@@ -18,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) IBOutlet UILabel *speedLabel;
 
-- (void)beginnLocationUpdates:(Location *)myLocation;
+-(void)beginnLocationUpdates:(Location *)myLocation;
+-(void)handleLocationChange:(NSNotification *)notification;
 
 @end

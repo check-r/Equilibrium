@@ -14,7 +14,7 @@
 @implementation Location
 
 
-@synthesize myLocationManager, mySpeed, postalCode, geocoder, geocodePending;
+@synthesize myLocationManager, mySpeed, mySpeedText, postalCode, geocoder, geocodePending;
 
 -(id)init {
     
@@ -26,6 +26,7 @@
     postalCode = @"unknown";
     geocodePending = NO;
     geocoder = [[CLGeocoder alloc]init];
+    mySpeedText = @"Calculating...";
     
     myLocationManager = [[CLLocationManager alloc]init];
     [myLocationManager setDelegate:self];
@@ -81,6 +82,10 @@
     
     float speed = [self calculateSpeedInMPH:[newLocation speed]];
     mySpeed = speed;
+    mySpeedText = [NSString stringWithFormat:@"%.0f MPH", mySpeed];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LocationChange" object:self];
+    
 }
 
 
