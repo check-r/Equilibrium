@@ -83,7 +83,6 @@
 
 /* Begin PBXFileReference section */
 		F80E06D916C2B6F5006431E5 /* FirstViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewControllerTests.m; sourceTree = "<group>"; };
-		F80EB77A16C41DFE00B6D322 /* Xcode.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Xcode.app; path = ../../../../../Applications/Xcode.app; sourceTree = "<group>"; };
 		F8718F6416BD541D00178425 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		F8718F6516BD541D00178425 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		F8718F6716BD543A00178425 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -130,7 +129,6 @@
 		F8A8C6E216BD4EFC005D26D9 /* LocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTests.m; sourceTree = "<group>"; };
 		F8B1F16416BEF9320018B347 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "Equilibrium/OCMock 2.0.1/libOCMock.a"; sourceTree = "<group>"; };
 		F8B793C116BE755D00652DAC /* WeatherAPITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherAPITest.m; sourceTree = "<group>"; };
-		F8C6D5F816C4395A003D5FC5 /* Mail.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Mail.app; path = ../../../../../Applications/Mail.app; sourceTree = "<group>"; };
 		F8CF497E16BDAC28001CD5D2 /* GHUnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHUnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CF498416BDAC28001CD5D2 /* GHUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GHUnitTests-Info.plist"; sourceTree = "<group>"; };
 		F8CF498616BDAC28001CD5D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -230,8 +228,6 @@
 		F8A8C68016BD4E24005D26D9 = {
 			isa = PBXGroup;
 			children = (
-				F8C6D5F816C4395A003D5FC5 /* Mail.app */,
-				F80EB77A16C41DFE00B6D322 /* Xcode.app */,
 				F8A8C69216BD4E24005D26D9 /* Equilibrium */,
 				F8A8C6C116BD4E24005D26D9 /* ApplicationTests */,
 				F8A8C6DB16BD4EFC005D26D9 /* LogicTests */,
