@@ -761,10 +761,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
 				);
-				OTHER_CFLAGS = (
-					"-fprofile-arcs",
-					"-ftest-coverage",
-				);
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -791,10 +788,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
 				);
-				OTHER_CFLAGS = (
-					"-fprofile-arcs",
-					"-ftest-coverage",
-				);
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
