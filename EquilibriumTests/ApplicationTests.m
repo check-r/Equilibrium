@@ -23,7 +23,7 @@
     AppDelegate * appDelegate = [application delegate];
     UIWindow * window = [appDelegate window];
     UITabBarController * tabBar = (UITabBarController *)[window rootViewController];
-    self.vc = (FirstViewController *)[tabBar.viewControllers objectAtIndex:0];
+    self.vc = (VCTrackMe *)[tabBar.viewControllers objectAtIndex:0];
 }
 
 - (void)tearDown

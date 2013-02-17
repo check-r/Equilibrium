@@ -7,13 +7,13 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
-#import "FirstViewController.h"
+#import "VCTrackMe.h"
 #import "AppDelegate.h"
 
 
 @interface ApplicationTests : SenTestCase
 
-@property (nonatomic, weak) FirstViewController * vc;
+@property (nonatomic, weak) VCTrackMe * vc;
 
 
 

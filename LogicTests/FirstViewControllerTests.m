@@ -9,13 +9,13 @@
 
 #import "OCMock/OCMock.h"
 #import <SenTestingKit/SenTestingKit.h>
-#import "FirstViewController.h"
+#import "VCTrackMe.h"
 
 
 
 @interface FirstViewControllerTests : SenTestCase
 
-@property (nonatomic, strong) FirstViewController * fvc;
+@property (nonatomic, strong) VCTrackMe * fvc;
 
 
 @end
@@ -30,7 +30,7 @@
 {
     [super setUp];
     // Set-up code here.
-    self.fvc = [[FirstViewController alloc]init];
+    self.fvc = [[VCTrackMe alloc]init];
     
 }
 

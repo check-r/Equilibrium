@@ -4,18 +4,23 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--First View Controller - First-->
+        <!--VCTrackMe - Track Me-->
         <scene sceneID="11">
             <objects>
-                <viewController title="First" id="2" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController title="Track Me" id="2" userLabel="VCTrackMe - Track Me" customClass="VCTrackMe" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PCK-Kw-Dy3">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="I2M-gE-MH5"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="I2M-gE-MH5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="vT1-iX-nF4"/>
+                                </constraints>
+                            </mapView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Calculating..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="ddT-1f-Je5">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="83" id="HLO-UP-KCg"/>
+                                    <constraint firstAttribute="width" constant="201" id="WUi-Of-2r7"/>
+                                    <constraint firstAttribute="height" constant="81" id="jFT-s8-26M"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -24,16 +29,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="I2M-gE-MH5" firstAttribute="trailing" secondItem="PCK-Kw-Dy3" secondAttribute="trailing" type="default" id="3mQ-oj-ZAJ"/>
                             <constraint firstItem="I2M-gE-MH5" firstAttribute="leading" secondItem="PCK-Kw-Dy3" secondAttribute="leading" type="default" id="5je-cr-ZPV"/>
                             <constraint firstItem="I2M-gE-MH5" firstAttribute="top" secondItem="PCK-Kw-Dy3" secondAttribute="top" type="default" id="61H-cA-UIR"/>
-                            <constraint firstItem="ddT-1f-Je5" firstAttribute="top" secondItem="PCK-Kw-Dy3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="LBP-5i-8xA"/>
-                            <constraint firstItem="I2M-gE-MH5" firstAttribute="bottom" secondItem="PCK-Kw-Dy3" secondAttribute="bottom" type="default" id="Wd4-9q-IFg"/>
-                            <constraint firstItem="ddT-1f-Je5" firstAttribute="leading" secondItem="PCK-Kw-Dy3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="YVW-ru-8zf"/>
-                            <constraint firstAttribute="trailing" secondItem="ddT-1f-Je5" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mXf-me-Mp3"/>
+                            <constraint firstItem="ddT-1f-Je5" firstAttribute="leading" secondItem="PCK-Kw-Dy3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9MN-cA-s4o"/>
+                            <constraint firstItem="ddT-1f-Je5" firstAttribute="centerX" secondItem="I2M-gE-MH5" secondAttribute="centerX" type="default" id="N3i-T1-rns"/>
+                            <constraint firstItem="ddT-1f-Je5" firstAttribute="top" secondItem="PCK-Kw-Dy3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="OqF-li-2AM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="Track Me" image="first" id="7"/>
                     <connections>
                         <outlet property="mapView" destination="I2M-gE-MH5" id="4fH-pU-A0d"/>
                         <outlet property="speedLabel" destination="ddT-1f-Je5" id="UJZ-cx-RMd"/>
@@ -41,14 +44,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-226"/>
+            <point key="canvasLocation" x="667" y="518"/>
         </scene>
-        <!--Second View Controller - Second-->
+        <!--VCEquilibrium - Equilibrium-->
         <scene sceneID="13">
             <objects>
-                <viewController title="Second" id="3" customClass="SecondViewController" sceneMemberID="viewController">
+                <viewController title="Activities" id="3" userLabel="VCEquilibrium - Equilibrium" customClass="VCEquilibrium" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="22">
@@ -67,11 +70,11 @@
                             <constraint firstItem="22" firstAttribute="top" secondItem="17" secondAttribute="top" constant="20" symbolic="YES" type="default" id="LQJ-QW-iuO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sR2-Po-6AA"/>
+                    <tabBarItem key="tabBarItem" title="Equilibrium" image="first" id="NPI-oO-mz9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1179" y="498"/>
+            <point key="canvasLocation" x="667" y="2538"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -85,34 +88,16 @@
                     </tabBar>
                     <connections>
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
-                        <segue destination="P1c-iq-NFv" kind="relationship" relationship="viewControllers" id="27"/>
+                        <segue destination="W3D-fa-mGH" kind="relationship" relationship="viewControllers" id="BAs-S2-xMe"/>
                         <segue destination="yee-MP-fno" kind="relationship" relationship="viewControllers" id="bgU-my-ajI"/>
+                        <segue destination="3" kind="relationship" relationship="viewControllers" id="IzV-hx-a0Z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-295" y="498"/>
+            <point key="canvasLocation" x="37" y="1558"/>
         </scene>
-        <!--Navigation Controller - Second-->
-        <scene sceneID="nmh-bT-fYo">
-            <objects>
-                <navigationController id="P1c-iq-NFv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="6"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2cj-Nw-q6u">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="3" kind="relationship" relationship="rootViewController" id="nfZ-KI-ygz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uqH-Pc-cFK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="653" y="498"/>
-        </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Table View Controller - History-->
         <scene sceneID="VHu-MW-gSf">
             <objects>
                 <tableViewController id="auf-KT-kib" sceneMemberID="viewController">
@@ -121,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="JHP-ZA-dZ6">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoryCells" id="JHP-ZA-dZ6">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -132,16 +117,46 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="H34-vF-AuL"/>
+                    <navigationItem key="navigationItem" title="History" id="H34-vF-AuL"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cqi-it-AtT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1189" y="1201"/>
+            <point key="canvasLocation" x="1137" y="1189"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Table View Controller - Activities-->
+        <scene sceneID="lJj-v5-BTY">
+            <objects>
+                <tableViewController id="EIn-Iz-cUM" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AZo-TK-dsT">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ActivitiesCells" id="3cT-bl-4NJ">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EIn-Iz-cUM" id="oUq-sg-Ucx"/>
+                            <outlet property="delegate" destination="EIn-Iz-cUM" id="8iG-ct-W6S"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Activities" id="3Xj-Eo-f2F"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="66a-gy-KnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="1873"/>
+        </scene>
+        <!--Navigation Controller - History-->
         <scene sceneID="bff-2s-gUc">
             <objects>
-                <navigationController definesPresentationContext="YES" id="yee-MP-fno" sceneMemberID="viewController">
+                <navigationController title="History" definesPresentationContext="YES" id="yee-MP-fno" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="history" id="xxZ-dd-5TG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="s8s-oA-gJR">
                         <autoresizingMask key="autoresizingMask"/>
@@ -154,26 +169,30 @@
             </objects>
             <point key="canvasLocation" x="667" y="1189"/>
         </scene>
+        <!--Navigation Controller - Activities-->
+        <scene sceneID="B5X-N8-EdO">
+            <objects>
+                <navigationController title="Activities" id="W3D-fa-mGH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Activities" image="second.png" id="XLL-sh-6m2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hPG-cq-BgW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EIn-Iz-cUM" kind="relationship" relationship="rootViewController" id="K35-Qw-Evv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ons-pB-bJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="1873"/>
+        </scene>
     </scenes>
     <resources>
         <image name="first" width="16" height="16"/>
-        <image name="second" width="16" height="16"/>
+        <image name="second.png" width="30" height="30"/>
     </resources>
-    <classes>
-        <class className="FirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="speedLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SecondViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
