@@ -11,6 +11,8 @@
 #import "ActivitiesViewController.h"
 
 
+
+
 @interface ActivitiesApplicationTests : SenTestCase
 
 @property (nonatomic, weak) ActivitiesViewController * activitiesVC;

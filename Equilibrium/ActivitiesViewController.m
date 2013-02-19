@@ -1,5 +1,5 @@
 //
-//  VCActivities.m
+//  ActivitiesViewController.m
 //  Equilibrium
 //
 //  Created by Stefan on 18.02.13.
@@ -7,6 +7,7 @@
 //
 
 #import "ActivitiesViewController.h"
+
 
 @interface ActivitiesViewController ()
 

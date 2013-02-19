@@ -1,5 +1,5 @@
 //
-//  VCActivitiesDetails.m
+//  ActivitiesDetailsViewController.m
 //  Equilibrium
 //
 //  Created by Stefan on 18.02.13.

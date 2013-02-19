@@ -1,5 +1,5 @@
 //
-//  FirstViewControllerTests.m
+//  TrackMeViewControllerTests.m
 //  Equilibrium
 //
 //  Created by Stefan on 06.02.13.
@@ -15,7 +15,7 @@
 
 @interface TrackMeViewControllerTests : SenTestCase
 
-@property (nonatomic, strong) TrackMeViewController * vc;
+@property (nonatomic, strong) TrackMeViewController * tmvc;
 
 
 @end
@@ -24,39 +24,39 @@
 
 @implementation TrackMeViewControllerTests
 
-@synthesize vc;
+@synthesize tmvc;
 
 - (void)setUp
 {
     [super setUp];
     // Set-up code here.
-    self.vc = [[TrackMeViewController alloc]init];
+    self.tmvc = [[TrackMeViewController alloc]init];
     
 }
 
 - (void)tearDown
 {
     // Tear-down code here.
-    self.vc = nil;
+    self.tmvc = nil;
     [super tearDown];
 }
 
 
--(void) testFirstViewControllerCreated {
+-(void) testTrackMeViewControllerCreated {
     
-    STAssertNotNil(self.vc, @"FirstViewController not created");
+    STAssertNotNil(self.tmvc, @"TrackMeViewController not created");
 }
 
 -(void) testViewDidLoadSetsLocation {
     
-    [self.vc viewDidLoad];
-    STAssertNotNil(self.vc, @"Location wasn't set");
+    [self.tmvc viewDidLoad];
+    STAssertNotNil([self.tmvc myLocation], @"Location wasn't set");
 }
 
 
 -(void) testViewDidLoadCallsBeginnLocationUpdates {
     
-    id mockFVC = [OCMockObject partialMockForObject:self.vc];
+    id mockFVC = [OCMockObject partialMockForObject:self.tmvc];
     [[mockFVC expect] beginnLocationUpdates:[OCMArg any]];
     [mockFVC viewDidLoad];
     [mockFVC verify];
@@ -66,7 +66,7 @@
     
     id mock = [OCMockObject mockForClass:[Location class]];
     [[mock expect] startLocationUpdates];
-    [self.vc beginnLocationUpdates:mock];
+    [self.tmvc beginnLocationUpdates:mock];
     [mock verify];
 }
 
@@ -74,8 +74,8 @@
     
     id mock = [OCMockObject niceMockForClass:[MKMapView class]];
     [[mock expect] setUserTrackingMode:MKUserTrackingModeFollow];
-    [self.vc setMapView:(MKMapView *)mock];
-    [self.vc viewDidLoad];
+    [self.tmvc setMapView:(MKMapView *)mock];
+    [self.tmvc viewDidLoad];
     [mock verify];
 }
 
@@ -89,16 +89,16 @@
     id labelMock = [OCMockObject mockForClass:[UILabel class]];
     [[labelMock expect] setText:@"55 MPH"];
     
-    [self.vc setSpeedLabel:labelMock];
+    [self.tmvc setSpeedLabel:labelMock];
     
-    [self.vc handleLocationChange:(NSNotification *)notificationMock];
+    [self.tmvc handleLocationChange:(NSNotification *)notificationMock];
     
     [labelMock verify];
 }
 
 -(void) testThatNotificationHandlerCalled {
     
-    id mockFVC = [OCMockObject partialMockForObject:self.vc];
+    id mockFVC = [OCMockObject partialMockForObject:self.tmvc];
     [[mockFVC expect] handleLocationChange:[OCMArg any]];
     [mockFVC viewDidLoad];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"LocationChange" object:nil];
@@ -107,7 +107,7 @@
 
 -(void) testThatNotificationHandlerNotCalledAfterUnload {
     
-    id mockFVC = [OCMockObject partialMockForObject:self.vc];
+    id mockFVC = [OCMockObject partialMockForObject:self.tmvc];
     [[mockFVC reject] handleLocationChange:[OCMArg any]];
     [mockFVC viewDidLoad];
     [mockFVC viewDidUnload];
@@ -119,8 +119,8 @@
     
     id mock = [OCMockObject mockForClass:[MKMapView class]];
     [[mock expect] setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
-    [self.vc setMapView:(MKMapView *)mock];
-    [self.vc handleMapTap];
+    [self.tmvc setMapView:(MKMapView *)mock];
+    [self.tmvc handleMapTap];
     [mock verify];
 }
 
@@ -129,8 +129,8 @@
     
     id mock = [OCMockObject niceMockForClass:[MKMapView class]];
     [[mock expect] addGestureRecognizer:[OCMArg any]];
-    [self.vc setMapView:(MKMapView *)mock];
-    [self.vc viewDidLoad];
+    [self.tmvc setMapView:(MKMapView *)mock];
+    [self.tmvc viewDidLoad];
     [mock verify];
 }
 

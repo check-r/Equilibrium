@@ -1,5 +1,5 @@
 //
-//  VCTrackMe.m
+//  TrackMeViewController.m
 //  Equilibrium
 //
 //  Created by Stefan on 02.02.13.

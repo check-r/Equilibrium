@@ -1,5 +1,5 @@
 //
-//  VCEquilibrium.h
+//  EquilibriumViewController.h
 //  Equilibrium
 //
 //  Created by Stefan on 02.02.13.

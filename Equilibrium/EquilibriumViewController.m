@@ -1,5 +1,5 @@
 //
-//  VCEquilibrium.m
+//  EquilibriumViewController.m
 //  Equilibrium
 //
 //  Created by Stefan on 02.02.13.
@@ -7,8 +7,8 @@
 //
 
 #import "EquilibriumViewController.h"
-
 #import "BNPieChart.h"
+
 
 @interface EquilibriumViewController ()
 
