@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Schlafen</key>
+        <integer>33</integer>
+        <key>Arbeiten</key>
+        <integer>25</integer>
+        <key>Sport</key>
+        <integer>5</integer>
+        <key>Familie</key>
+        <integer>10</integer>
+        <key>Essen</key>
+        <integer>8</integer>
+        <key>Spazieren</key>
+        <integer>5</integer>
+        <key>Fliegen</key>
+        <integer>5</integer>
+        <key>Lesen</key>
+        <integer>5</integer>
+    </dict>
+</plist>

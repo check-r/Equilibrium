@@ -1,18 +1,18 @@
 //
-//  FirstViewController.m
+//  VCTrackMe.m
 //  Equilibrium
 //
 //  Created by Stefan on 02.02.13.
 //  Copyright (c) 2013 Stefan Schröer. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "TrackMeViewController.h"
 
-@interface FirstViewController ()
+@interface TrackMeViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation TrackMeViewController
 
 @synthesize myLocation, mapView;
 

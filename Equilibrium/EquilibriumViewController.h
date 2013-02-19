@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCEquilibrium : UIViewController
+@interface EquilibriumViewController : UIViewController
 
 @end

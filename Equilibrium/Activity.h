@@ -14,6 +14,12 @@
 @property (nonatomic, strong) NSNumber * actPercent;
 @property (nonatomic, strong) NSNumber * actSelected;
 @property (nonatomic, strong) NSString * actIcon;
+@property (nonatomic, strong) NSString * actSequence;
+
+@property (strong, nonatomic) NSMutableArray * activities;
+
+-(void) savePlistData;
+-(void) loadPlistData;
 
 
 @end

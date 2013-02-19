@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Schlafen</key>
+	<string>Regenbogen</string>
+	<key>Arbeiten</key>
+	<string>Stadt Essen</string>
+	<key>Sport</key>
+	<string>Skifahren</string>
+	<key>Familie</key>
+	<string>Familie</string>
+	<key>Essen</key>
+	<string>Essen</string>
+	<key>Spazieren</key>
+	<string>Am Strand</string>
+	<key>Fliegen</key>
+	<string>Fliegen</string>
+	<key>Lesen</key>
+	<string>Emma malt</string>
+</dict>
+</plist>

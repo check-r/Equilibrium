@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>1</key>
+	<dict>
+		<key>activity</key>
+		<string>Arbeiten</string>
+		<key>selected</key>
+		<integer>0</integer>
+		<key>start</key>
+		<date>2000-01-01T00:00:00Z</date>
+		<key>ende</key>
+		<date>2000-01-01T00:00:01Z</date>
+	</dict>
+</dict>
+</plist>

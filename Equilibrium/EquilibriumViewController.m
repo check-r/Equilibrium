@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 Stefan Schröer. All rights reserved.
 //
 
-#import "VCEquilibrium.h"
+#import "EquilibriumViewController.h"
 
 #import "BNPieChart.h"
 
-@interface VCEquilibrium ()
+@interface EquilibriumViewController ()
 
 @end
 
-@implementation VCEquilibrium
+@implementation EquilibriumViewController
 
 - (void)viewDidLoad
 {

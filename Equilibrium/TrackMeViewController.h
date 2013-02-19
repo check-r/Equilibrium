@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  VCTrackMe.h
 //  Equilibrium
 //
 //  Created by Stefan on 02.02.13.
@@ -11,7 +11,7 @@
 #import <MapKit/MapKit.h>
 
 
-@interface FirstViewController : UIViewController
+@interface TrackMeViewController : UIViewController
 
 @property (nonatomic, strong) Location * myLocation;
 
