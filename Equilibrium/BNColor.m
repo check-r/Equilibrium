@@ -216,11 +216,21 @@ IMPL_NAMED_COLOR(whiteColor, 1, 1, 1)
 #pragma mark NSCoding methods
 
 - (id)initWithCoder:(NSCoder *)decoder {
-  if (![super init]) return nil;
-  red = [decoder decodeFloatForKey:kRedKey];
-  green = [decoder decodeFloatForKey:kGreenKey];
-  blue = [decoder decodeFloatForKey:kBlueKey];
-  return self;
+    
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    red = [decoder decodeFloatForKey:kRedKey];
+    green = [decoder decodeFloatForKey:kGreenKey];
+    blue = [decoder decodeFloatForKey:kBlueKey];
+    return self;
+
+//  if (![super init]) return nil;
+//  red = [decoder decodeFloatForKey:kRedKey];
+//  green = [decoder decodeFloatForKey:kGreenKey];
+//  blue = [decoder decodeFloatForKey:kBlueKey];
+//  return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
