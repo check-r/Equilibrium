@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) Activity * act;
 
+-(void)startLoadingPlistData:(Activity *)activityObject;
+
 @end

@@ -47,11 +47,28 @@
     STAssertNotNil(self.actvc, @"ActivitiesViewController not created");
 }
 
-//-(void) testViewDidLoadSetsLocation {
-//    
-//    [self.vc viewDidLoad];
-//    STAssertNotNil(self.vc, @"Location wasn't set");
-//}
-//
+-(void) testViewDidLoadSetsActivityReference {
+    
+    [self.actvc viewDidLoad];
+    STAssertNotNil([self.actvc act], @"Activity reference  not set");
+}
+
+
+-(void) testViewDidLoadCallsStartLoadingPlistData {
+    
+    id mockVC = [OCMockObject partialMockForObject:self.actvc];
+    [[mockVC expect] startLoadingPlistData:[OCMArg any]];
+    [mockVC viewDidLoad];
+    [mockVC verify];
+}
+
+-(void) testStartLoadingPlistData {
+    
+    id mock = [OCMockObject mockForClass:[Activity class]];
+    [[mock expect] loadPlistData];
+    [self.actvc startLoadingPlistData:mock];
+    [mock verify];
+}
+
 
 @end

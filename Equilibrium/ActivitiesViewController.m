@@ -26,6 +26,11 @@
     return self;
 }
 
+- (void)startLoadingPlistData:(Activity *)activityObject
+{
+    [activityObject loadPlistData];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -35,9 +40,12 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.act = [[Activity alloc] init];
-    [self.act loadPlistData];
-
+    
+    self.act = [Activity sharedInstance];
+    
+    // refactor: auslagern zum testen
+    [self startLoadingPlistData:self.act];
+ 
 }
 
 - (void)didReceiveMemoryWarning

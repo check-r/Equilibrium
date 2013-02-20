@@ -33,7 +33,8 @@
     AppDelegate * appDelegate = [application delegate];
     UIWindow * window = [appDelegate window];
     UITabBarController * tabBar = (UITabBarController *)[window rootViewController];
-     // load TrackMeViewController
+ 
+    // load TrackMeViewController
     self.trackMeVC = (TrackMeViewController *)[tabBar.viewControllers objectAtIndex:1];
     [self.trackMeVC loadView];
     [self.trackMeVC viewDidLoad];

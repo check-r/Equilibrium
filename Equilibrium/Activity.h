@@ -18,6 +18,8 @@
 
 @property (strong, nonatomic) NSMutableArray * activities;
 
++(Activity *) sharedInstance;
+
 -(void) savePlistData;
 -(void) loadPlistData;
 

@@ -72,6 +72,8 @@
 		F8B477AB16D3D4AA00363A12 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F6806216C581B200234088 /* Activity.m */; };
 		F8B477AC16D3D4AB00363A12 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F6806216C581B200234088 /* Activity.m */; };
 		F8B793C216BE755D00652DAC /* WeatherAPITest.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B793C116BE755D00652DAC /* WeatherAPITest.m */; };
+		F8C23EDA16D3EA1A00A78C38 /* ActivityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C23ED916D3EA1A00A78C38 /* ActivityTests.m */; };
+		F8C23EDB16D3EAE400A78C38 /* ActivityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C23ED916D3EA1A00A78C38 /* ActivityTests.m */; };
 		F8CF497F16BDAC28001CD5D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68C16BD4E24005D26D9 /* UIKit.framework */; };
 		F8CF498016BDAC28001CD5D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68E16BD4E24005D26D9 /* Foundation.framework */; };
 		F8CF498116BDAC28001CD5D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C69016BD4E24005D26D9 /* CoreGraphics.framework */; };
@@ -171,6 +173,7 @@
 		F8B1F16416BEF9320018B347 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "Equilibrium/OCMock 2.0.1/libOCMock.a"; sourceTree = "<group>"; };
 		F8B477A516D3D26B00363A12 /* ActivitiesViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiesViewControllerTests.m; sourceTree = "<group>"; };
 		F8B793C116BE755D00652DAC /* WeatherAPITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherAPITest.m; sourceTree = "<group>"; };
+		F8C23ED916D3EA1A00A78C38 /* ActivityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTests.m; sourceTree = "<group>"; };
 		F8CF497E16BDAC28001CD5D2 /* GHUnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHUnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CF498416BDAC28001CD5D2 /* GHUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GHUnitTests-Info.plist"; sourceTree = "<group>"; };
 		F8CF498616BDAC28001CD5D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -410,9 +413,10 @@
 		F8A8C6DB16BD4EFC005D26D9 /* LogicTests */ = {
 			isa = PBXGroup;
 			children = (
+				F8C23ED916D3EA1A00A78C38 /* ActivityTests.m */,
+				F8A8C6E216BD4EFC005D26D9 /* LocationTests.m */,
 				F8B477A516D3D26B00363A12 /* ActivitiesViewControllerTests.m */,
 				F80E06D916C2B6F5006431E5 /* TrackMeViewControllerTests.m */,
-				F8A8C6E216BD4EFC005D26D9 /* LocationTests.m */,
 				F87D764A16C2B217002CF484 /* SupportingFiles */,
 			);
 			path = LogicTests;
@@ -669,6 +673,7 @@
 				F8B477A616D3D26B00363A12 /* ActivitiesViewControllerTests.m in Sources */,
 				F8B477A916D3D48100363A12 /* ActivitiesViewController.m in Sources */,
 				F8B477AB16D3D4AA00363A12 /* Activity.m in Sources */,
+				F8C23EDA16D3EA1A00A78C38 /* ActivityTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +691,7 @@
 				F80EB77916C4146C00B6D322 /* TrackMeViewController.m in Sources */,
 				F8B477AA16D3D48200363A12 /* ActivitiesViewController.m in Sources */,
 				F8B477AC16D3D4AB00363A12 /* Activity.m in Sources */,
+				F8C23EDB16D3EAE400A78C38 /* ActivityTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

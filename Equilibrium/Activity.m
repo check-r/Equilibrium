@@ -12,6 +12,26 @@
 
 @synthesize actActivity, actPercent, actSelected, actIcon, actSequence, activities;
 
+static Activity * sharedInstance = nil;
+
+
+
+-(id)init {
+    
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    return self;
+}
+
++(Activity *) sharedInstance {
+    if (sharedInstance == nil) {
+        sharedInstance = [[Activity alloc] init];
+    }
+    return sharedInstance;
+}
+
 #pragma mark save/load plist data
 
 - (void) savePlistData{

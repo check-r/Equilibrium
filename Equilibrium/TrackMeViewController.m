@@ -27,8 +27,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     self.myLocation = [[Location alloc]init];
+    
+    // refactor: auslagern zum testen
     [self beginnLocationUpdates:self.myLocation];
     self.mapView.userTrackingMode = MKUserTrackingModeFollow;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleLocationChange:) name:@"LocationChange" object:nil];

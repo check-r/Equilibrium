@@ -35,8 +35,6 @@
     UIWindow * window = [appDelegate window];
     UITabBarController * tabBar = (UITabBarController *)[window rootViewController];
     self.activitiesVC = (ActivitiesViewController *)[tabBar.viewControllers objectAtIndex:0];
-//    [self.activitiesVC loadView];
-//    [self.activitiesVC viewDidLoad];
 }
 
 - (void)tearDown
@@ -51,5 +49,8 @@
 {
     STAssertNotNil(self.activitiesVC, @"ViewController is not set");
 }
+
+
+
 
 @end
