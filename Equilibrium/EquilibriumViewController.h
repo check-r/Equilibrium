@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface EquilibriumViewController : UIViewController
+
+@interface EquilibriumViewController : UIViewController <ADBannerViewDelegate>
 
 @end

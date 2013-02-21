@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Activity.h"
+#import <iAd/iAd.h>
 
-@interface ActivitiesViewController : UITableViewController
+
+
+@interface ActivitiesViewController : UITableViewController <ADBannerViewDelegate>
 
 @property (nonatomic, strong) Activity * act;
 

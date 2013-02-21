@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Location.h"
 #import <MapKit/MapKit.h>
+#import <iAd/iAd.h>
 
-
-@interface TrackMeViewController : UIViewController
+@interface TrackMeViewController : UIViewController <ADBannerViewDelegate>
 
 @property (nonatomic, strong) Location * myLocation;
 

@@ -39,6 +39,14 @@
     [self.mapView addGestureRecognizer:mapTap];
     
     self.mapView.showsUserLocation = YES;  // set in nib also possible, or must be used with niceMocks when set in viewDidLoad
+    
+    // iAd
+    ADBannerView *iAdBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0,412,0,0)];
+    //iAdBanner.currentContentSizeIdentifier = ADBannerContentSizeIdentifier320x50;
+    iAdBanner.delegate = self;
+    [self.view addSubview:iAdBanner];
+
+    
 }
 
 
@@ -75,5 +83,44 @@
     [self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     
 }
+
+#pragma mark iAd integration
+
+BOOL trackMeBannerVisible = NO;
+
+
+-(void) bannerViewDidLoadAd:(ADBannerView *)banner{
+    
+    if (!trackMeBannerVisible) {
+        [UIView beginAnimations:@"bannerApear" context:NULL];
+        banner.frame = CGRectOffset(banner.frame, 0, -50);
+        [UIView commitAnimations];
+        trackMeBannerVisible = YES;
+    }
+    
+}
+
+-(void) bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+    
+    if (trackMeBannerVisible) {
+        [UIView beginAnimations:@"bannerDisapear" context:NULL];
+        banner.frame = CGRectOffset(banner.frame, 0, 50);
+        [UIView commitAnimations];
+        trackMeBannerVisible = NO;
+    }
+}
+
+-(BOOL) bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave {
+    
+    return YES;
+}
+
+-(void) banerViewActionDiDFinisch: (ADBannerView *)banner{
+    
+    NSLog(@"Bin zurück aus der Werbung");
+    
+}
+
+
 
 @end

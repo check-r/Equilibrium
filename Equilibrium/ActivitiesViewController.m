@@ -7,7 +7,7 @@
 //
 
 #import "ActivitiesViewController.h"
-
+#import "ActivitiesDetailsViewController.h"
 
 @interface ActivitiesViewController ()
 
@@ -16,6 +16,19 @@
 @implementation ActivitiesViewController
 
 @synthesize act;
+
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    ActivitiesDetailsViewController * dvc = [segue destinationViewController];
+    NSIndexPath * path = [self.tableView indexPathForSelectedRow];
+    Activity * object = [act.activities objectAtIndex:[path row]];
+    dvc.detailItem = object;
+    dvc.myItemNumber = path.row;
+    dvc.objects = self.act.activities;
+    
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -49,8 +62,21 @@
     
     // refactor: auslagern zum testen
     [self startLoadingPlistData:self.act];
- 
+    
+    
+    // iAd
+    ADBannerView *iAdBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0,367,0,0)];
+    //iAdBanner.currentContentSizeIdentifier = ADBannerContentSizeIdentifier320x50;
+    iAdBanner.delegate = self;
+    [self.view addSubview:iAdBanner];
 }
+
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [self.tableView reloadData];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -124,6 +150,7 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        [act.activities removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -153,6 +180,22 @@
 
 #pragma mark - Table view delegate
 
+- (void)insertNewObject:(id)sender
+{
+    if (!act.activities) {
+        act.activities = [[NSMutableArray alloc] init];
+    }
+    Activity * newAct = [[Activity alloc]init];
+    newAct.actActivity = @"neue Aktivität";
+    newAct.actIcon = @"Icon";
+    newAct.actSelected = [[NSNumber alloc] initWithInt:1];
+    newAct.actPercent = [[NSNumber alloc]initWithInt:10];
+    [act.activities insertObject:newAct atIndex:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
@@ -164,7 +207,41 @@
      */
 }
 
+#pragma mark iAd integration
 
+BOOL actBannerVisible = NO;
+
+-(void) bannerViewDidLoadAd:(ADBannerView *)banner{
+    
+    if (!actBannerVisible) {
+        [UIView beginAnimations:@"bannerApear" context:NULL];
+        banner.frame = CGRectOffset(banner.frame, 0, -50);
+        [UIView commitAnimations];
+        actBannerVisible = YES;
+    }
+    
+}
+
+-(void) bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+    
+    if (actBannerVisible) {
+        [UIView beginAnimations:@"bannerDisapear" context:NULL];
+        banner.frame = CGRectOffset(banner.frame, 0, 50);
+        [UIView commitAnimations];
+        actBannerVisible = NO;
+    }
+}
+
+-(BOOL) bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave {
+    
+    return YES;
+}
+
+-(void) banerViewActionDiDFinisch: (ADBannerView *)banner{
+    
+    NSLog(@"Bin zurück aus der Werbung");
+    
+}
 
 
 @end
