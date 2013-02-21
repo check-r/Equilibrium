@@ -58,6 +58,15 @@ static Activity * sharedInstance = nil;
         [tmpDictionary setValue:[tmp actSelected] forKey:[tmp actActivity]];
     }
     [self writeDictionaryToFile:tmpDictionary toFile:@"userActivitiesSelected.plist"];
+ 
+    // Save sequence in plist
+    int sequence = 0;
+    for (Activity * tmp in activities) {
+        NSLog(@"saved: %i, %@",sequence,[tmp actActivity] );
+        [tmpDictionary setValue:[[NSNumber alloc] initWithInt:sequence] forKey:[tmp actActivity]];
+        sequence++;
+    }
+    [self writeDictionaryToFile:tmpDictionary toFile:@"userActivitiesSequence.plist"];
     
 }
 
