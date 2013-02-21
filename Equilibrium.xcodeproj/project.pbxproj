@@ -21,6 +21,9 @@
 		F858878616D6283400FB3FD4 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F858877D16D6241900FB3FD4 /* iAd.framework */; };
 		F858878716D6501300FB3FD4 /* ActivitiesDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F859E4B616D210D200095A9E /* ActivitiesDetailsViewController.m */; };
 		F858878816D6501400FB3FD4 /* ActivitiesDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F859E4B616D210D200095A9E /* ActivitiesDetailsViewController.m */; };
+		F858878B16D658DD00FB3FD4 /* CurrentActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F858878A16D658DD00FB3FD4 /* CurrentActivity.m */; };
+		F858878D16D658DD00FB3FD4 /* CurrentActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F858878A16D658DD00FB3FD4 /* CurrentActivity.m */; };
+		F858878E16D658DD00FB3FD4 /* CurrentActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F858878A16D658DD00FB3FD4 /* CurrentActivity.m */; };
 		F859E4B416D2101600095A9E /* ActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F859E4B316D2101600095A9E /* ActivitiesViewController.m */; };
 		F859E4B716D210D200095A9E /* ActivitiesDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F859E4B616D210D200095A9E /* ActivitiesDetailsViewController.m */; };
 		F859E4C316D2122900095A9E /* Am Strand.png in Resources */ = {isa = PBXBuildFile; fileRef = F859E4BA16D2122900095A9E /* Am Strand.png */; };
@@ -118,6 +121,8 @@
 		F851666516D3C20500D4A143 /* TrackMeApplicationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackMeApplicationTests.m; sourceTree = "<group>"; };
 		F851666716D3C44600D4A143 /* ActivitiesApplicationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiesApplicationTests.m; sourceTree = "<group>"; };
 		F858877D16D6241900FB3FD4 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		F858878916D658DD00FB3FD4 /* CurrentActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentActivity.h; sourceTree = "<group>"; };
+		F858878A16D658DD00FB3FD4 /* CurrentActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentActivity.m; sourceTree = "<group>"; };
 		F859E4B216D2101600095A9E /* ActivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitiesViewController.h; sourceTree = "<group>"; };
 		F859E4B316D2101600095A9E /* ActivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiesViewController.m; sourceTree = "<group>"; };
 		F859E4B516D210D200095A9E /* ActivitiesDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitiesDetailsViewController.h; sourceTree = "<group>"; };
@@ -301,6 +306,8 @@
 			children = (
 				F8F6806116C581B200234088 /* Activity.h */,
 				F8F6806216C581B200234088 /* Activity.m */,
+				F858878916D658DD00FB3FD4 /* CurrentActivity.h */,
+				F858878A16D658DD00FB3FD4 /* CurrentActivity.m */,
 				F8718F6416BD541D00178425 /* Location.h */,
 				F872A22316BDDD2B00AA7507 /* LocationForTesting.h */,
 				F8718F6516BD541D00178425 /* Location.m */,
@@ -664,6 +671,7 @@
 				F8F6806316C581B200234088 /* Activity.m in Sources */,
 				F859E4B416D2101600095A9E /* ActivitiesViewController.m in Sources */,
 				F859E4B716D210D200095A9E /* ActivitiesDetailsViewController.m in Sources */,
+				F858878B16D658DD00FB3FD4 /* CurrentActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,6 +697,7 @@
 				F8B477AB16D3D4AA00363A12 /* Activity.m in Sources */,
 				F8C23EDA16D3EA1A00A78C38 /* ActivityTests.m in Sources */,
 				F858878716D6501300FB3FD4 /* ActivitiesDetailsViewController.m in Sources */,
+				F858878D16D658DD00FB3FD4 /* CurrentActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +717,7 @@
 				F8B477AC16D3D4AB00363A12 /* Activity.m in Sources */,
 				F8C23EDB16D3EAE400A78C38 /* ActivityTests.m in Sources */,
 				F858878816D6501400FB3FD4 /* ActivitiesDetailsViewController.m in Sources */,
+				F858878E16D658DD00FB3FD4 /* CurrentActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

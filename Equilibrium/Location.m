@@ -59,6 +59,7 @@
 
     float speedInMetersPerHour = speedInMetersPerSecond * 60 * 60;
     return speedInMetersPerHour / 1609.344;
+
 }
 
 

@@ -9,6 +9,7 @@
 #import "ActivitiesViewController.h"
 #import "ActivitiesDetailsViewController.h"
 
+
 @interface ActivitiesViewController ()
 
 @end
@@ -21,13 +22,15 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    ActivitiesDetailsViewController * dvc = [segue destinationViewController];
-    NSIndexPath * path = [self.tableView indexPathForSelectedRow];
-    Activity * object = [act.activities objectAtIndex:[path row]];
-    dvc.detailItem = object;
-    dvc.myItemNumber = path.row;
-    dvc.objects = self.act.activities;
-    
+    if ([[segue identifier] isEqualToString:@"activitiesDetails"]) {
+
+        ActivitiesDetailsViewController * dvc = [segue destinationViewController];
+        NSIndexPath * path = [self.tableView indexPathForSelectedRow];
+        Activity * object = [act.activities objectAtIndex:[path row]];
+        dvc.detailItem = object;
+        dvc.myItemNumber = path.row;
+        dvc.objects = self.act.activities;
+    }
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -63,6 +66,7 @@
     // refactor: auslagern zum testen
     [self startLoadingPlistData:self.act];
     
+    // 
     
     // iAd
     ADBannerView *iAdBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0,367,0,0)];
