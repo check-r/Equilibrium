@@ -1,44 +1,28 @@
 //
-//  ActivitiesViewController.m
+//  ActivitiesHistoryViewController.m
 //  Equilibrium
 //
-//  Created by Stefan on 18.02.13.
+//  Created by Stefan on 22.02.13.
 //  Copyright (c) 2013 Stefan Schröer. All rights reserved.
 //
 
-#import "ActivitiesViewController.h"
-#import "ActivitiesDetailsViewController.h"
+#import "ActivitiesHistoryViewController.h"
 
-
-@interface ActivitiesViewController ()
+@interface ActivitiesHistoryViewController ()
 
 @end
 
-@implementation ActivitiesViewController
+@implementation ActivitiesHistoryViewController
 
-@synthesize act;
+@synthesize hist;
 
-
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if ([[segue identifier] isEqualToString:@"activitiesDetails"]) {
-
-        ActivitiesDetailsViewController * dvc = [segue destinationViewController];
-        NSIndexPath * path = [self.tableView indexPathForSelectedRow];
-        Activity * object = [act.activities objectAtIndex:[path row]];
-        dvc.detailItem = object;
-        dvc.myItemNumber = path.row;
-        dvc.objects = self.act.activities;
-    }
-}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-     }
+    }
     return self;
 }
 
@@ -56,9 +40,8 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    // init
-    self.act = [Activity sharedInstance];
-    
+    self.hist = [ActivityHistory sharedInstance];
+
     // iAd
     ADBannerView *iAdBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0,367,0,0)];
     //iAdBanner.currentContentSizeIdentifier = ADBannerContentSizeIdentifier320x50;
@@ -90,12 +73,12 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [act.activities count];
+    return hist.activitiesHistory.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ActivitiesCell";
+    static NSString *CellIdentifier = @"ActivitiesHistoryCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
@@ -103,31 +86,41 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
+    /*
+    // init objects
+    int key = [indexPath row];
+    NSString * keyString = [NSString stringWithFormat:@"%i", key];
+    NSArray * objects = [myAct.activitiesHistory objectForKey:keyString];
     // set Label Text
-    NSString * object = [[act.activities objectAtIndex:[indexPath row]] actActivity];
-    cell.textLabel.text = [object description];
-    
-    // set Details
-    object = [[NSString alloc] initWithFormat:@"%@%%",[[act.activities objectAtIndex:[indexPath row]] actPercent]];
-    cell.detailTextLabel.text = [object description];
-    
-    // Retrieve an set Image from NSBundle mainBundle
-    object = [[act.activities objectAtIndex:[indexPath row]] actIcon];
-    NSString *myImageFile = [[NSBundle mainBundle] pathForResource:object ofType:@"png"];
-    UIImage *myImage = [[UIImage alloc] initWithContentsOfFile:myImageFile];
-    [[cell imageView]setImage:myImage];
-    
-    // Set selected or not  BOOL or integer
-    BOOL yep = [[[act.activities objectAtIndex:[indexPath row]] actSelected] boolValue];
-    //NSLog(@"->%@ ", [selectedActivities objectForKey:myString]);
-    if (yep) {
-        //NSLog(@"yep");
-        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-    } else {
-        //NSLog(@"no yep");
-        [cell setAccessoryType:UITableViewCellAccessoryNone];
-    }
-     return cell;
+    if (! isnull(objects)) then {
+        cell.textLabel.text = [objects valueForKey:@"activity"];
+        
+        // set Details
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"EE. dd.MM.yy 'um' HH:mm"];
+        NSDate * startDate = [objects valueForKey:@"start"];
+        NSDate * endDate = [objects valueForKey:@"ende"];
+        
+        NSTimeInterval interval = [endDate timeIntervalSinceDate:startDate];
+        int seconds = (int) interval % 60;
+        int minutes = ((int) (interval - seconds) / 60) % 60;
+        int hours = (int) (interval   / 3600);
+        NSString * duration = [NSString stringWithFormat:@"%02d:%02d:%02d", hours,
+                               minutes, seconds];
+        NSString * detail = [NSString stringWithFormat:@"%@ - Dauer: %@", [dateFormatter stringFromDate:startDate], duration];
+        
+        cell.detailTextLabel.text = detail;
+        
+        // Set selected or not  BOOL or integer
+        BOOL yep = [[objects valueForKey:@"selected"] boolValue];
+        if (yep) {
+            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        } else {
+            [cell setAccessoryType:UITableViewCellAccessoryNone];
+        }
+        
+    }*/
+    return cell;
 }
 
 /*
@@ -145,7 +138,7 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [act.activities removeObjectAtIndex:indexPath.row];
+        [hist.activitiesHistory removeObjectAtIndex:[indexPath row]];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -154,15 +147,12 @@
 }
 
 
+/*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
-    Activity * tmp = [[Activity alloc] init];
-    tmp = [act.activities objectAtIndex:fromIndexPath.row];
-    [act.activities removeObjectAtIndex:fromIndexPath.row];
-    [act.activities insertObject:tmp atIndex:toIndexPath.row];
 }
-
+*/
 
 /*
 // Override to support conditional rearranging of the table view.
@@ -174,22 +164,6 @@
 */
 
 #pragma mark - Table view delegate
-
-- (void)insertNewObject:(id)sender
-{
-    if (!act.activities) {
-        act.activities = [[NSMutableArray alloc] init];
-    }
-    Activity * newAct = [[Activity alloc]init];
-    newAct.actActivity = @"neue Aktivität";
-    newAct.actIcon = @"Icon";
-    newAct.actSelected = [[NSNumber alloc] initWithInt:1];
-    newAct.actPercent = [[NSNumber alloc]initWithInt:10];
-    [act.activities insertObject:newAct atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -204,26 +178,26 @@
 
 #pragma mark iAd integration
 
-BOOL actBannerVisible = NO;
+BOOL actHistoryBannerVisible = NO;
 
 -(void) bannerViewDidLoadAd:(ADBannerView *)banner{
     
-    if (!actBannerVisible) {
+    if (!actHistoryBannerVisible) {
         [UIView beginAnimations:@"bannerApear" context:NULL];
         banner.frame = CGRectOffset(banner.frame, 0, -50);
         [UIView commitAnimations];
-        actBannerVisible = YES;
+        actHistoryBannerVisible = YES;
     }
     
 }
 
 -(void) bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
     
-    if (actBannerVisible) {
+    if (actHistoryBannerVisible) {
         [UIView beginAnimations:@"bannerDisapear" context:NULL];
         banner.frame = CGRectOffset(banner.frame, 0, 50);
         [UIView commitAnimations];
-        actBannerVisible = NO;
+        actHistoryBannerVisible = NO;
     }
 }
 
@@ -237,6 +211,5 @@ BOOL actBannerVisible = NO;
     NSLog(@"Bin zurück aus der Werbung");
     
 }
-
 
 @end

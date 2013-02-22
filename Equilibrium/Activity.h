@@ -19,10 +19,6 @@
 @property (strong, nonatomic) NSMutableArray * activities;
 
 
-
-@property (strong,nonatomic) NSNumber * actHistoryPrimaryKey;
-@property (strong, nonatomic) NSMutableDictionary * activitiesHistory;
-
 +(Activity *) sharedInstance;
 
 -(void) savePlistData;

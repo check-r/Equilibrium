@@ -15,7 +15,7 @@
 @implementation TrackMeViewController
 
 @synthesize myLocation, mapView;
-@synthesize activityTimer,myAct,currAct;
+@synthesize activityTimer,myAct, myHist, currAct;
 
 
 
@@ -55,6 +55,8 @@
 
     // TrackMe init
     self.myAct = [Activity sharedInstance];
+    self.myHist = [ActivityHistory sharedInstance];
+    
     if (!currAct) {
         self.currAct = [[CurrentActivity alloc] init];
     }
@@ -160,10 +162,25 @@ BOOL trackMeBannerVisible = NO;
         currAct.ende= [NSDate date];
         [self.activityTimer invalidate];
         
-        NSDictionary * tmp = [[NSDictionary alloc] initWithObjectsAndKeys:currAct.activity, @"activity", currAct.start, @"start", currAct.ende, @"ende", currAct.selected, @"selected",nil];
-        [myAct.activitiesHistory setValue:tmp forKey:[myAct.actHistoryPrimaryKey stringValue]];
-        int calc = myAct.actHistoryPrimaryKey.intValue +1;
-        myAct.actHistoryPrimaryKey = [NSNumber numberWithInt:calc];
+        int calc = myHist.histLastPrimaryKey.integerValue +1;
+        myHist.histLastPrimaryKey = [NSNumber numberWithInt:calc];
+        [myHist.activitiesHistory setValue:myHist.histLastPrimaryKey forKey:@"primaryKey"];
+        
+        if (!myHist.activitiesHistory) {
+            myHist.activitiesHistory = [[NSMutableArray alloc] init];
+        }
+        ActivityHistory * newHist = [[ActivityHistory alloc]init];
+        newHist.histPrimaryKey = myHist.histLastPrimaryKey;
+        newHist.histActivity = currAct.activity;
+        newHist.histSelected = currAct.selected;
+        newHist.histStart = currAct.start;
+        newHist.histEnd = currAct.ende;
+        
+        [myHist.activitiesHistory insertObject:newHist atIndex:0];
+       //NSDictionary * tmp = [[NSDictionary alloc] initWithObjectsAndKeys:myHist. currAct.activity, @"activity", currAct.start, @"start", currAct.ende, @"end", currAct.selected, @"selected",nil];
+        //[myAct.activitiesHistory setValue:tmp forKey:[myAct.actHistoryPrimaryKey stringValue]];
+
+        
         [self.myPickerView setHidden:NO];
         
     }

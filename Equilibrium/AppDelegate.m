@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Activity.h"
+#import "ActivityHistory.h"
 
 
 @implementation AppDelegate
@@ -15,6 +16,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    Activity * act = [Activity sharedInstance];
+    [act loadPlistData];
+
+    ActivityHistory * hist = [ActivityHistory sharedInstance];
+    [hist loadPlistData];
+    
     return YES;
 }
 							
@@ -32,6 +40,9 @@
     Activity  * act = [Activity sharedInstance];
     [act savePlistData];
     
+    ActivityHistory * hist = [ActivityHistory sharedInstance];
+    [hist savePlistData];
+ 
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

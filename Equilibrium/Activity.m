@@ -11,7 +11,7 @@
 @implementation Activity
 
 @synthesize actActivity, actPercent, actSelected, actIcon, actSequence, activities;
-@synthesize actHistoryPrimaryKey, activitiesHistory;
+
 
 static Activity * sharedInstance = nil;
 
@@ -68,11 +68,7 @@ static Activity * sharedInstance = nil;
         sequence++;
     }
     [self writeDictionaryToFile:tmpDictionary toFile:@"userActivitiesSequence.plist"];
-    
-    
-    // Save HistoryDictionary in plist
-    [self writeDictionaryToFile:activitiesHistory toFile:@"userHistoryDictionary.plist"];
-
+ 
 }
 
 - (void) loadPlistData {
@@ -139,18 +135,6 @@ static Activity * sharedInstance = nil;
     NSSortDescriptor * sortSequence = [[NSSortDescriptor alloc] initWithKey:@"actSequence" ascending:YES];
     NSArray *sortDescriptors = @[sortSequence];
     [activities sortUsingDescriptors:sortDescriptors];
-
-    // Activities History
-    // Setze plistPath für ...
-    plistPath = [rootPath stringByAppendingPathComponent:@"userHistoryDictionary.plist"];
-    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
-        // Falls die Datei nicht vorhanden ist nimm default aus dem Bundle...
-        plistPath = [[NSBundle mainBundle] pathForResource:@"startHistoryDictionary" ofType:@"plist"];
-    }
-    activitiesHistory = [self getDictionaryFromFile:plistPath];
-    int calc = activitiesHistory.count + 1;
-    actHistoryPrimaryKey = [NSNumber numberWithInt:calc];
-    NSLog(@"new primary key:%@",actHistoryPrimaryKey);
 
 }
 

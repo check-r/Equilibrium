@@ -12,6 +12,9 @@
 		F80EB77716C4135300B6D322 /* TrackMeViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F80E06D916C2B6F5006431E5 /* TrackMeViewControllerTests.m */; };
 		F80EB77816C4138600B6D322 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8718F6B16BD684500178425 /* MapKit.framework */; };
 		F80EB77916C4146C00B6D322 /* TrackMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A8C6A816BD4E24005D26D9 /* TrackMeViewController.m */; };
+		F838A16516D7DF9A0075022A /* ActivityHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F838A16416D7DF9A0075022A /* ActivityHistory.m */; };
+		F838A16616D7DF9A0075022A /* ActivityHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F838A16416D7DF9A0075022A /* ActivityHistory.m */; };
+		F838A16716D7DF9A0075022A /* ActivityHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F838A16416D7DF9A0075022A /* ActivityHistory.m */; };
 		F851666616D3C20500D4A143 /* TrackMeApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F851666516D3C20500D4A143 /* TrackMeApplicationTests.m */; };
 		F851666816D3C44600D4A143 /* ActivitiesApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F851666716D3C44600D4A143 /* ActivitiesApplicationTests.m */; };
 		F858877E16D6241900FB3FD4 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F858877D16D6241900FB3FD4 /* iAd.framework */; };
@@ -126,6 +129,8 @@
 
 /* Begin PBXFileReference section */
 		F80E06D916C2B6F5006431E5 /* TrackMeViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackMeViewControllerTests.m; sourceTree = "<group>"; };
+		F838A16316D7DF9A0075022A /* ActivityHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityHistory.h; sourceTree = "<group>"; };
+		F838A16416D7DF9A0075022A /* ActivityHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityHistory.m; sourceTree = "<group>"; };
 		F851666516D3C20500D4A143 /* TrackMeApplicationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackMeApplicationTests.m; sourceTree = "<group>"; };
 		F851666716D3C44600D4A143 /* ActivitiesApplicationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiesApplicationTests.m; sourceTree = "<group>"; };
 		F858877D16D6241900FB3FD4 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -322,6 +327,8 @@
 			children = (
 				F8F6806116C581B200234088 /* Activity.h */,
 				F8F6806216C581B200234088 /* Activity.m */,
+				F838A16316D7DF9A0075022A /* ActivityHistory.h */,
+				F838A16416D7DF9A0075022A /* ActivityHistory.m */,
 				F858878916D658DD00FB3FD4 /* CurrentActivity.h */,
 				F858878A16D658DD00FB3FD4 /* CurrentActivity.m */,
 				F8718F6416BD541D00178425 /* Location.h */,
@@ -690,6 +697,7 @@
 				F858878B16D658DD00FB3FD4 /* CurrentActivity.m in Sources */,
 				F858879116D7884E00FB3FD4 /* ActivitiesHistoryViewController.m in Sources */,
 				F858879716D7888C00FB3FD4 /* ActivitiesHistoryDetailsViewController.m in Sources */,
+				F838A16516D7DF9A0075022A /* ActivityHistory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +728,7 @@
 				F858878D16D658DD00FB3FD4 /* CurrentActivity.m in Sources */,
 				F858879316D7884E00FB3FD4 /* ActivitiesHistoryViewController.m in Sources */,
 				F858879916D7888C00FB3FD4 /* ActivitiesHistoryDetailsViewController.m in Sources */,
+				F838A16616D7DF9A0075022A /* ActivityHistory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +751,7 @@
 				F858878E16D658DD00FB3FD4 /* CurrentActivity.m in Sources */,
 				F858879416D7884E00FB3FD4 /* ActivitiesHistoryViewController.m in Sources */,
 				F858879A16D7888C00FB3FD4 /* ActivitiesHistoryDetailsViewController.m in Sources */,
+				F838A16716D7DF9A0075022A /* ActivityHistory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

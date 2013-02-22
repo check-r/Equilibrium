@@ -60,7 +60,7 @@
     [[mockVC expect] startLoadingPlistData:[OCMArg any]];
     [mockVC viewDidLoad];
     [mockVC verify];
-}*/
+}
 
 -(void) testStartLoadingPlistData {
     
@@ -68,7 +68,7 @@
     [[mock expect] loadPlistData];
     [self.actvc startLoadingPlistData:mock];
     [mock verify];
-}
+}*/
 
 
 @end
