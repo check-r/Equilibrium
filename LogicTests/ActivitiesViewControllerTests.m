@@ -53,14 +53,14 @@
     STAssertNotNil([self.actvc act], @"Activity reference  not set");
 }
 
-
+/*
 -(void) testViewDidLoadCallsStartLoadingPlistData {
     
     id mockVC = [OCMockObject partialMockForObject:self.actvc];
     [[mockVC expect] startLoadingPlistData:[OCMArg any]];
     [mockVC viewDidLoad];
     [mockVC verify];
-}
+}*/
 
 -(void) testStartLoadingPlistData {
     

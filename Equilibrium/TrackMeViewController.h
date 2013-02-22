@@ -16,6 +16,7 @@
 @interface TrackMeViewController : UIViewController <ADBannerViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (nonatomic, strong) Location * myLocation;
+@property (nonatomic, strong) Activity * myAct;
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) IBOutlet UILabel *speedLabel;
@@ -25,19 +26,14 @@
 -(void)handleMapTap;
 
 
-//- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView;
-
-// returns the # of rows in each component..
-//- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component;
-
 
 @property (weak, nonatomic) IBOutlet UIPickerView *myPickerView;
 
-@property (strong, nonatomic) NSMutableArray * objects;
+//@property (strong, nonatomic) NSMutableArray * objects;
 
 @property (strong, nonatomic) NSTimer * activityTimer;
-@property (strong,nonatomic) NSNumber * primaryKey;
-@property (strong,nonatomic) NSMutableDictionary * myTestDictionary;
+//@property (strong,nonatomic) NSNumber * primaryKey;
+//@property (strong,nonatomic) NSMutableDictionary * myActivitiesHistory;
 @property (strong,nonatomic) CurrentActivity * currAct;
 
 //@property (strong, nonatomic) ThirdViewController * viewController3;

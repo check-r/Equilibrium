@@ -53,14 +53,14 @@
     STAssertNotNil([self.tmvc myLocation], @"Location wasn't set");
 }
 
-
+/*
 -(void) testViewDidLoadCallsBeginnLocationUpdates {
     
     id mockFVC = [OCMockObject partialMockForObject:self.tmvc];
     [[mockFVC expect] beginnLocationUpdates:[OCMArg any]];
     [mockFVC viewDidLoad];
     [mockFVC verify];
-}
+}*/
 
 -(void) testBeginnLocationUpdates {
     
@@ -96,6 +96,7 @@
     [labelMock verify];
 }
 
+/*
 -(void) testThatNotificationHandlerCalled {
     
     id mockFVC = [OCMockObject partialMockForObject:self.tmvc];
@@ -114,7 +115,7 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"LocationChange" object:nil];
     [mockFVC verify];
 }
-
+*/
 -(void) testTapGestureHandlerSetsUserTrackingModeFollow {
     
     id mock = [OCMockObject mockForClass:[MKMapView class]];

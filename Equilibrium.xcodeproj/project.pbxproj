@@ -24,6 +24,14 @@
 		F858878B16D658DD00FB3FD4 /* CurrentActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F858878A16D658DD00FB3FD4 /* CurrentActivity.m */; };
 		F858878D16D658DD00FB3FD4 /* CurrentActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F858878A16D658DD00FB3FD4 /* CurrentActivity.m */; };
 		F858878E16D658DD00FB3FD4 /* CurrentActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F858878A16D658DD00FB3FD4 /* CurrentActivity.m */; };
+		F858879116D7884E00FB3FD4 /* ActivitiesHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F858879016D7884D00FB3FD4 /* ActivitiesHistoryViewController.m */; };
+		F858879216D7884E00FB3FD4 /* ActivitiesHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F858879016D7884D00FB3FD4 /* ActivitiesHistoryViewController.m */; };
+		F858879316D7884E00FB3FD4 /* ActivitiesHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F858879016D7884D00FB3FD4 /* ActivitiesHistoryViewController.m */; };
+		F858879416D7884E00FB3FD4 /* ActivitiesHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F858879016D7884D00FB3FD4 /* ActivitiesHistoryViewController.m */; };
+		F858879716D7888C00FB3FD4 /* ActivitiesHistoryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F858879616D7888B00FB3FD4 /* ActivitiesHistoryDetailsViewController.m */; };
+		F858879816D7888C00FB3FD4 /* ActivitiesHistoryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F858879616D7888B00FB3FD4 /* ActivitiesHistoryDetailsViewController.m */; };
+		F858879916D7888C00FB3FD4 /* ActivitiesHistoryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F858879616D7888B00FB3FD4 /* ActivitiesHistoryDetailsViewController.m */; };
+		F858879A16D7888C00FB3FD4 /* ActivitiesHistoryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F858879616D7888B00FB3FD4 /* ActivitiesHistoryDetailsViewController.m */; };
 		F859E4B416D2101600095A9E /* ActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F859E4B316D2101600095A9E /* ActivitiesViewController.m */; };
 		F859E4B716D210D200095A9E /* ActivitiesDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F859E4B616D210D200095A9E /* ActivitiesDetailsViewController.m */; };
 		F859E4C316D2122900095A9E /* Am Strand.png in Resources */ = {isa = PBXBuildFile; fileRef = F859E4BA16D2122900095A9E /* Am Strand.png */; };
@@ -123,6 +131,10 @@
 		F858877D16D6241900FB3FD4 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		F858878916D658DD00FB3FD4 /* CurrentActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentActivity.h; sourceTree = "<group>"; };
 		F858878A16D658DD00FB3FD4 /* CurrentActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentActivity.m; sourceTree = "<group>"; };
+		F858878F16D7884D00FB3FD4 /* ActivitiesHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitiesHistoryViewController.h; sourceTree = "<group>"; };
+		F858879016D7884D00FB3FD4 /* ActivitiesHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiesHistoryViewController.m; sourceTree = "<group>"; };
+		F858879516D7888B00FB3FD4 /* ActivitiesHistoryDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitiesHistoryDetailsViewController.h; sourceTree = "<group>"; };
+		F858879616D7888B00FB3FD4 /* ActivitiesHistoryDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiesHistoryDetailsViewController.m; sourceTree = "<group>"; };
 		F859E4B216D2101600095A9E /* ActivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitiesViewController.h; sourceTree = "<group>"; };
 		F859E4B316D2101600095A9E /* ActivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiesViewController.m; sourceTree = "<group>"; };
 		F859E4B516D210D200095A9E /* ActivitiesDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitiesDetailsViewController.h; sourceTree = "<group>"; };
@@ -297,6 +309,10 @@
 				F8A8C6A816BD4E24005D26D9 /* TrackMeViewController.m */,
 				F8A8C6AE16BD4E24005D26D9 /* EquilibriumViewController.h */,
 				F8A8C6AF16BD4E24005D26D9 /* EquilibriumViewController.m */,
+				F858878F16D7884D00FB3FD4 /* ActivitiesHistoryViewController.h */,
+				F858879016D7884D00FB3FD4 /* ActivitiesHistoryViewController.m */,
+				F858879516D7888B00FB3FD4 /* ActivitiesHistoryDetailsViewController.h */,
+				F858879616D7888B00FB3FD4 /* ActivitiesHistoryDetailsViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -672,6 +688,8 @@
 				F859E4B416D2101600095A9E /* ActivitiesViewController.m in Sources */,
 				F859E4B716D210D200095A9E /* ActivitiesDetailsViewController.m in Sources */,
 				F858878B16D658DD00FB3FD4 /* CurrentActivity.m in Sources */,
+				F858879116D7884E00FB3FD4 /* ActivitiesHistoryViewController.m in Sources */,
+				F858879716D7888C00FB3FD4 /* ActivitiesHistoryDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +699,8 @@
 			files = (
 				F851666616D3C20500D4A143 /* TrackMeApplicationTests.m in Sources */,
 				F851666816D3C44600D4A143 /* ActivitiesApplicationTests.m in Sources */,
+				F858879216D7884E00FB3FD4 /* ActivitiesHistoryViewController.m in Sources */,
+				F858879816D7888C00FB3FD4 /* ActivitiesHistoryDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,6 +718,8 @@
 				F8C23EDA16D3EA1A00A78C38 /* ActivityTests.m in Sources */,
 				F858878716D6501300FB3FD4 /* ActivitiesDetailsViewController.m in Sources */,
 				F858878D16D658DD00FB3FD4 /* CurrentActivity.m in Sources */,
+				F858879316D7884E00FB3FD4 /* ActivitiesHistoryViewController.m in Sources */,
+				F858879916D7888C00FB3FD4 /* ActivitiesHistoryDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +740,8 @@
 				F8C23EDB16D3EAE400A78C38 /* ActivityTests.m in Sources */,
 				F858878816D6501400FB3FD4 /* ActivitiesDetailsViewController.m in Sources */,
 				F858878E16D658DD00FB3FD4 /* CurrentActivity.m in Sources */,
+				F858879416D7884E00FB3FD4 /* ActivitiesHistoryViewController.m in Sources */,
+				F858879A16D7888C00FB3FD4 /* ActivitiesHistoryDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,6 +824,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				TEST_AFTER_BUILD = NO;
 			};
 			name = Debug;
 		};
@@ -824,6 +849,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				TEST_AFTER_BUILD = NO;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

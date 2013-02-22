@@ -76,7 +76,7 @@
                withHandler:^(NSArray *placemarks, NSError *error){
                    CLPlacemark *placemark = [placemarks objectAtIndex:0];
                    [self setPostalCode:[placemark postalCode]];
-                   NSLog(@"%@",self.postalCode);
+                   //NSLog(@"%@",self.postalCode);
                    geocodePending = NO;
                }];
     

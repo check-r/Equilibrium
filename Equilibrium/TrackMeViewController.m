@@ -15,7 +15,7 @@
 @implementation TrackMeViewController
 
 @synthesize myLocation, mapView;
-@synthesize objects, activityTimer,primaryKey,myTestDictionary,currAct;
+@synthesize activityTimer,myAct,currAct;
 
 
 
@@ -25,7 +25,12 @@
 {
     [location startLocationUpdates];
 }
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [self.myPickerView reloadAllComponents];
+    NSLog(@"ViewWillAppear reloaded");
 
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -49,21 +54,21 @@
     [self.view addSubview:iAdBanner];
 
     // TrackMe init
-    self.objects = [[Activity sharedInstance] activities];
+    self.myAct = [Activity sharedInstance];
     if (!currAct) {
         self.currAct = [[CurrentActivity alloc] init];
     }
-    [currAct setActivity:[[objects objectAtIndex:0] actActivity]];
+    [currAct setActivity:[[myAct.activities objectAtIndex:0] actActivity]];
     [currAct setStart:nil];
     [currAct setEnde:nil];
     [currAct setSelected:[NSNumber numberWithInt:1]];
     [self.myLabel setText:currAct.activity];
-    NSString * file = [[NSBundle mainBundle] pathForResource:[[objects objectAtIndex:0] actIcon] ofType:@"png"];
+    NSString * file = [[NSBundle mainBundle] pathForResource:[[myAct.activities objectAtIndex:0] actIcon] ofType:@"png"];
     UIImage * image = [[UIImage alloc] initWithContentsOfFile:file];
     [self.myImageView setImage:image];
     [self.mySwitch setOn:NO];
     self.myTextField.text = nil;
-    NSLog(@"bin geladen");
+    NSLog(@"ViewDidLoad bin geladen");
 }
 
 
@@ -142,11 +147,6 @@ BOOL trackMeBannerVisible = NO;
 
 - (IBAction)switched:(id)sender{
     
-    // Bsp. "yyyy.MM.dd G 'at' HH:mm:ss zzz"
-    //[myDateFormatter setTimeStyle:NSDateFormatterNoStyle];
-    //[myDateFormatter setDateStyle:NSDateFormatterLongStyle];
-    //[myDateFormatter setShortStandaloneWeekdaySymbols:[[NSArray alloc] initWithObjects:@"Mo.",@"Di."@"Mi."@"Do."@"Fr."@"Sa."@"So.", nil]];
-    
     NSDateFormatter * myDateFormatter = [[NSDateFormatter alloc] init];
     [myDateFormatter setDateFormat:@"E dd.MM.yy 'um' HH:mm:ss"];
     if (self.mySwitch.isOn) {
@@ -161,9 +161,9 @@ BOOL trackMeBannerVisible = NO;
         [self.activityTimer invalidate];
         
         NSDictionary * tmp = [[NSDictionary alloc] initWithObjectsAndKeys:currAct.activity, @"activity", currAct.start, @"start", currAct.ende, @"ende", currAct.selected, @"selected",nil];
-        [myTestDictionary setValue:tmp forKey:[primaryKey stringValue]];
-        int calc = primaryKey.intValue +1;
-        primaryKey = [NSNumber numberWithInt:calc];
+        [myAct.activitiesHistory setValue:tmp forKey:[myAct.actHistoryPrimaryKey stringValue]];
+        int calc = myAct.actHistoryPrimaryKey.intValue +1;
+        myAct.actHistoryPrimaryKey = [NSNumber numberWithInt:calc];
         [self.myPickerView setHidden:NO];
         
     }
@@ -181,45 +181,28 @@ BOOL trackMeBannerVisible = NO;
 
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return self.objects.count;
+    return self.myAct.activities.count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     
-    NSString * tmp = [[NSString alloc] initWithString:[[objects objectAtIndex:row] actActivity]];
+    NSString * tmp = [[NSString alloc] initWithString:[[myAct.activities objectAtIndex:row] actActivity]];
     NSString * aString = [[NSString alloc] initWithString:tmp];
     return aString;
 }
 
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    
-    // save current activity
-    //    if (self.mySwitch.isOn) {
-    //        currAct.ende= [NSDate date];
-    //        [self.activityTimer invalidate];
-    //
-    //        NSDictionary * tmp = [[NSDictionary alloc] initWithObjectsAndKeys:currAct.activity, @"activity", currAct.start, @"start", currAct.ende, @"ende", currAct.selected, @"selected",nil];
-    //        [myTestDictionary setValue:tmp forKey:[primaryKey stringValue]];
-    //        int calc = primaryKey.intValue +1;
-    //        primaryKey = [NSNumber numberWithInt:calc];
-    //    }
-    //
-    // setup new activity
-    currAct.activity = [[objects objectAtIndex:row] actActivity];
+
+    currAct.activity = [[myAct.activities objectAtIndex:row] actActivity];
     [self.myLabel setText:currAct.activity];
-    NSString * file = [[NSBundle mainBundle] pathForResource:[[objects objectAtIndex:row] actIcon] ofType:@"png"];
+    NSString * file = [[NSBundle mainBundle] pathForResource:[[myAct.activities objectAtIndex:row] actIcon] ofType:@"png"];
     UIImage * image = [[UIImage alloc] initWithContentsOfFile:file];
     [self.myImageView setImage:image];
     [self.mySwitch setOn:NO];
     
-    //    NSDateFormatter * myDateFormatter = [[NSDateFormatter alloc] init];
-    //    [myDateFormatter setDateFormat:@"E dd.MM.yy 'um' HH:mm:ss"];
     currAct.start = nil;
     currAct.ende = nil;
-    //    activityTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
-    //    [self.activityTimer fire];
-    //    NSString * text = [[NSString alloc] initWithFormat:@"Startzeit: %@\n\n\nEndzeit: %@",[myDateFormatter stringFromDate:currAct.start],[myDateFormatter stringFromDate:currAct.ende]];
     [self.myTextField setText:nil];
     self.myTimerLabel.text = @"00:00:00";
 }
@@ -237,10 +220,8 @@ BOOL trackMeBannerVisible = NO;
     int hours = (int) (interval   / 3600);
     [self.myTimerLabel setText:[NSString stringWithFormat:@"%02d:%02d:%02d", hours,
                                 minutes, seconds]];
-    // Bsp. aus avPlayer
-    //currentTime.text = [NSString stringWithFormat:@"%d:%02d", (int)p.currentTime / 60, (int)p.currentTime % 60, nil];
-	
-    NSLog(@"intervall:%f\nhours:%i\nminutes:%i\nseconds:%i",interval, hours, minutes, seconds);
+ 	
+    //NSLog(@"intervall:%f\nhours:%i\nminutes:%i\nseconds:%i",interval, hours, minutes, seconds);
     
 }
 
