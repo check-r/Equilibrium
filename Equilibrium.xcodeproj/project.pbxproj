@@ -85,8 +85,7 @@
 		F8A8C6D916BD4EFC005D26D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68C16BD4E24005D26D9 /* UIKit.framework */; };
 		F8A8C6DA16BD4EFC005D26D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C68E16BD4E24005D26D9 /* Foundation.framework */; };
 		F8A8C6E316BD4EFC005D26D9 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A8C6E216BD4EFC005D26D9 /* LocationTests.m */; };
-		F8B1F16516BEF9320018B347 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B1F16416BEF9320018B347 /* libOCMock.a */; };
-		F8B1F16716BF065C0018B347 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B1F16416BEF9320018B347 /* libOCMock.a */; };
+		F8AC4C8616D83A7B00FF4BAE /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AC4C8516D83A7B00FF4BAE /* libOCMock.a */; };
 		F8B477A616D3D26B00363A12 /* ActivitiesViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B477A516D3D26B00363A12 /* ActivitiesViewControllerTests.m */; };
 		F8B477A916D3D48100363A12 /* ActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F859E4B316D2101600095A9E /* ActivitiesViewController.m */; };
 		F8B477AA16D3D48200363A12 /* ActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F859E4B316D2101600095A9E /* ActivitiesViewController.m */; };
@@ -200,7 +199,7 @@
 		F8A8C6C516BD4E24005D26D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F8A8C6D716BD4EFC005D26D9 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A8C6E216BD4EFC005D26D9 /* LocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTests.m; sourceTree = "<group>"; };
-		F8B1F16416BEF9320018B347 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "Equilibrium/OCMock 2.0.1/libOCMock.a"; sourceTree = "<group>"; };
+		F8AC4C8516D83A7B00FF4BAE /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "OCMock 2.0.1/libOCMock.a"; sourceTree = "<group>"; };
 		F8B477A516D3D26B00363A12 /* ActivitiesViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiesViewControllerTests.m; sourceTree = "<group>"; };
 		F8B793C116BE755D00652DAC /* WeatherAPITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherAPITest.m; sourceTree = "<group>"; };
 		F8C23ED916D3EA1A00A78C38 /* ActivityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTests.m; sourceTree = "<group>"; };
@@ -245,7 +244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8B1F16516BEF9320018B347 /* libOCMock.a in Frameworks */,
+				F8AC4C8616D83A7B00FF4BAE /* libOCMock.a in Frameworks */,
 				F8718F6816BD543A00178425 /* CoreLocation.framework in Frameworks */,
 				F8A8C6D816BD4EFC005D26D9 /* SenTestingKit.framework in Frameworks */,
 				F8A8C6D916BD4EFC005D26D9 /* UIKit.framework in Frameworks */,
@@ -266,7 +265,6 @@
 				F8CF499716BDAE39001CD5D2 /* CoreLocation.framework in Frameworks */,
 				F8CF499D16BDB77D001CD5D2 /* SenTestingKit.framework in Frameworks */,
 				F8CF499F16BDC120001CD5D2 /* GHUnitIOS.framework in Frameworks */,
-				F8B1F16716BF065C0018B347 /* libOCMock.a in Frameworks */,
 				F80EB77816C4138600B6D322 /* MapKit.framework in Frameworks */,
 				F858878616D6283400FB3FD4 /* iAd.framework in Frameworks */,
 			);
@@ -386,7 +384,7 @@
 		F8A8C68B16BD4E24005D26D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F8B1F16416BEF9320018B347 /* libOCMock.a */,
+				F8AC4C8516D83A7B00FF4BAE /* libOCMock.a */,
 				F858877D16D6241900FB3FD4 /* iAd.framework */,
 				F8CF499E16BDC120001CD5D2 /* GHUnitIOS.framework */,
 				F8718F6B16BD684500178425 /* MapKit.framework */,
@@ -870,6 +868,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Equilibrium/Equilibrium-Prefix.pch";
 				INFOPLIST_FILE = "Equilibrium/Equilibrium-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OCMock 2.0.1\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -881,6 +883,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Equilibrium/Equilibrium-Prefix.pch";
 				INFOPLIST_FILE = "Equilibrium/Equilibrium-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OCMock 2.0.1\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -897,6 +903,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Equilibrium/Equilibrium-Prefix.pch";
 				INFOPLIST_FILE = "EquilibriumTests/EquilibriumTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OCMock 2.0.1\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -914,6 +924,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Equilibrium/Equilibrium-Prefix.pch";
 				INFOPLIST_FILE = "EquilibriumTests/EquilibriumTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OCMock 2.0.1\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -933,12 +947,12 @@
 				GCC_PREFIX_HEADER = "LogicTests/LogicTests-Prefix.pch";
 				GENERATE_PROFILING_CODE = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
+					"\"$(SRCROOT)/OCMock 2.0.1\"",
 				);
 				INFOPLIST_FILE = "LogicTests/LogicTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
+					"\"$(SRCROOT)/OCMock 2.0.1\"",
 				);
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
@@ -963,12 +977,12 @@
 				GCC_PREFIX_HEADER = "LogicTests/LogicTests-Prefix.pch";
 				GENERATE_PROFILING_CODE = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
+					"\"$(SRCROOT)/OCMock 2.0.1\"",
 				);
 				INFOPLIST_FILE = "LogicTests/LogicTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
+					"\"$(SRCROOT)/OCMock 2.0.1\"",
 				);
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
@@ -999,6 +1013,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
+					"\"$(SRCROOT)/OCMock 2.0.1\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1029,6 +1044,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Equilibrium/OCMock 2.0.1\"",
+					"\"$(SRCROOT)/OCMock 2.0.1\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
