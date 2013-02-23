@@ -162,12 +162,11 @@ BOOL trackMeBannerVisible = NO;
         currAct.ende= [NSDate date];
         [self.activityTimer invalidate];
         
-        int calc = myHist.histLastPrimaryKey.integerValue +1;
-        myHist.histLastPrimaryKey = [NSNumber numberWithInt:calc];
-        [myHist.activitiesHistory setValue:myHist.histLastPrimaryKey forKey:@"primaryKey"];
+        int calc = self.myHist.histLastPrimaryKey.integerValue +1;
+        self.myHist.histLastPrimaryKey = [NSNumber numberWithInt:calc];
         
-        if (!myHist.activitiesHistory) {
-            myHist.activitiesHistory = [[NSMutableArray alloc] init];
+        if (!self.myHist.activitiesHistory) {
+            self.myHist.activitiesHistory = [[NSMutableArray alloc] init];
         }
         ActivityHistory * newHist = [[ActivityHistory alloc]init];
         newHist.histPrimaryKey = myHist.histLastPrimaryKey;
@@ -176,7 +175,7 @@ BOOL trackMeBannerVisible = NO;
         newHist.histStart = currAct.start;
         newHist.histEnd = currAct.ende;
         
-        [myHist.activitiesHistory insertObject:newHist atIndex:0];
+        [self.myHist.activitiesHistory insertObject:newHist atIndex:0];
        //NSDictionary * tmp = [[NSDictionary alloc] initWithObjectsAndKeys:myHist. currAct.activity, @"activity", currAct.start, @"start", currAct.ende, @"end", currAct.selected, @"selected",nil];
         //[myAct.activitiesHistory setValue:tmp forKey:[myAct.actHistoryPrimaryKey stringValue]];
 

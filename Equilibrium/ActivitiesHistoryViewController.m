@@ -86,20 +86,16 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
-    /*
+    
     // init objects
-    int key = [indexPath row];
-    NSString * keyString = [NSString stringWithFormat:@"%i", key];
-    NSArray * objects = [myAct.activitiesHistory objectForKey:keyString];
+    ActivityHistory * object = [hist.activitiesHistory objectAtIndex:[indexPath row]];
     // set Label Text
-    if (! isnull(objects)) then {
-        cell.textLabel.text = [objects valueForKey:@"activity"];
-        
+    cell.textLabel.text = [object histActivity];
         // set Details
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"EE. dd.MM.yy 'um' HH:mm"];
-        NSDate * startDate = [objects valueForKey:@"start"];
-        NSDate * endDate = [objects valueForKey:@"ende"];
+    NSDate * startDate = [object histStart];
+        NSDate * endDate = [object histEnd];
         
         NSTimeInterval interval = [endDate timeIntervalSinceDate:startDate];
         int seconds = (int) interval % 60;
@@ -112,14 +108,13 @@
         cell.detailTextLabel.text = detail;
         
         // Set selected or not  BOOL or integer
-        BOOL yep = [[objects valueForKey:@"selected"] boolValue];
+        BOOL yep = [[object histSelected] boolValue];
         if (yep) {
             [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
         } else {
             [cell setAccessoryType:UITableViewCellAccessoryNone];
         }
         
-    }*/
     return cell;
 }
 
