@@ -16,7 +16,7 @@
 @property (nonatomic, strong) NSDate * histStart;
 @property (nonatomic, strong) NSDate * histEnd;
 
-@property (strong,nonatomic) NSNumber * histLastPrimaryKey;
+/*@property (strong,nonatomic) NSNumber * histLastPrimaryKey;
 
 @property (strong, nonatomic) NSMutableArray * activitiesHistory;
 
@@ -24,7 +24,7 @@
 
 -(void) savePlistData;
 -(void) loadPlistData;
-
+*/
 
 
 @end

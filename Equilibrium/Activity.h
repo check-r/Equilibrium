@@ -16,13 +16,13 @@
 @property (nonatomic, strong) NSString * actIcon;
 @property (nonatomic, strong) NSString * actSequence;
 
-@property (strong, nonatomic) NSMutableArray * activities;
+/*@property (strong, nonatomic) NSMutableArray * activities;
 
 
 +(Activity *) sharedInstance;
 
 -(void) savePlistData;
 -(void) loadPlistData;
-
+*/
 
 @end

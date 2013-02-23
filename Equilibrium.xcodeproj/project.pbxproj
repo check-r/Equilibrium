@@ -57,6 +57,7 @@
 		F8718F6A16BD556200178425 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = F8718F6516BD541D00178425 /* Location.m */; };
 		F8718F6D16BD68A000178425 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8718F6B16BD684500178425 /* MapKit.framework */; };
 		F872A22816BDE45600AA7507 /* LocationGHAsyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F872A22716BDE45600AA7507 /* LocationGHAsyncTests.m */; };
+		F879BF7016D89A9E00CA84EA /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F879BF6F16D89A9E00CA84EA /* DataHandler.m */; };
 		F87D763C16C2594C002CF484 /* BNPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F87D763B16C2594C002CF484 /* BNPieChart.m */; };
 		F87D763F16C25B83002CF484 /* BNColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F87D763E16C25B83002CF484 /* BNColor.m */; };
 		F87D764216C25BB1002CF484 /* NSObject+Be.m in Sources */ = {isa = PBXBuildFile; fileRef = F87D764116C25BB1002CF484 /* NSObject+Be.m */; };
@@ -163,6 +164,8 @@
 		F8718F6B16BD684500178425 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F872A22316BDDD2B00AA7507 /* LocationForTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationForTesting.h; sourceTree = "<group>"; };
 		F872A22716BDE45600AA7507 /* LocationGHAsyncTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationGHAsyncTests.m; sourceTree = "<group>"; };
+		F879BF6E16D89A9E00CA84EA /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
+		F879BF6F16D89A9E00CA84EA /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
 		F87D763A16C2594C002CF484 /* BNPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNPieChart.h; sourceTree = "<group>"; };
 		F87D763B16C2594C002CF484 /* BNPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNPieChart.m; sourceTree = "<group>"; };
 		F87D763D16C25B83002CF484 /* BNColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNColor.h; sourceTree = "<group>"; };
@@ -332,6 +335,8 @@
 				F8718F6416BD541D00178425 /* Location.h */,
 				F872A22316BDDD2B00AA7507 /* LocationForTesting.h */,
 				F8718F6516BD541D00178425 /* Location.m */,
+				F879BF6E16D89A9E00CA84EA /* DataHandler.h */,
+				F879BF6F16D89A9E00CA84EA /* DataHandler.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -696,6 +701,7 @@
 				F858879116D7884E00FB3FD4 /* ActivitiesHistoryViewController.m in Sources */,
 				F858879716D7888C00FB3FD4 /* ActivitiesHistoryDetailsViewController.m in Sources */,
 				F838A16516D7DF9A0075022A /* ActivityHistory.m in Sources */,
+				F879BF7016D89A9E00CA84EA /* DataHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

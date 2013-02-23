@@ -11,10 +11,10 @@
 @implementation ActivityHistory
 
 @synthesize histActivity,histEnd,histPrimaryKey,histSelected,histStart;
-@synthesize histLastPrimaryKey, activitiesHistory;
+//@synthesize histLastPrimaryKey, activitiesHistory;
 
 
-static ActivityHistory * sharedInstance = nil;
+/*static ActivityHistory * sharedInstance = nil;
 
 
 
@@ -88,44 +88,7 @@ static ActivityHistory * sharedInstance = nil;
     [activitiesHistory sortUsingDescriptors:sortDescriptors];
     
     
-}
+}*/
 
-#pragma mark write/load Dictionary to/from file
-
-- (void)writeDictionaryToFile:(NSMutableDictionary *)tmpDictionary toFile:(NSString *)filename {
-    NSString *errorDesc=nil;
-    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *plistPath = [rootPath stringByAppendingPathComponent:filename];
-    NSData *plistData = [NSPropertyListSerialization
-                         dataFromPropertyList:tmpDictionary
-                         format:NSPropertyListXMLFormat_v1_0
-                         errorDescription:&errorDesc];
-    if(plistData) {
-        [plistData writeToFile:plistPath atomically:YES];
-        NSLog(@"\nplist saved:%@", plistPath);
-    }
-    else {
-        NSLog(@"Error saving plist: %@", errorDesc);
-    }
-}
-
-- (NSMutableDictionary *)getDictionaryFromFile:(NSString *)plistPath {
-    NSMutableDictionary *newDictionary;
-    NSPropertyListFormat format;
-    NSString *errorDesc  = nil;
-    
-    NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
-    newDictionary = (NSMutableDictionary *)[NSPropertyListSerialization
-                                            propertyListFromData:plistXML
-                                            mutabilityOption:NSPropertyListMutableContainersAndLeaves
-                                            format:&format
-                                            errorDescription:&errorDesc];
-    if (!newDictionary) {
-        NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
-    } else {
-        NSLog(@"\nplist loaded: %@",plistPath);
-    }
-    return newDictionary;
-}
 
 @end
